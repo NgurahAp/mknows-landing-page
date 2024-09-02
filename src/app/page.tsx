@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section className="h-[549px] bg-custom-blue">
+      <section className="h-[474px] bg-custom-blue">
         <nav className="bg-white shadow-md py-4 h-[75px] justify-between flex items-center fixed top-0 left-0 w-full z-50">
           <div className="flex items-center pl-[50px]">
             <div className="w-32 h-auto">
@@ -61,17 +61,19 @@ export default function Home() {
         </nav>
 
         <div className="flex justify-between items-center">
-          <div>
-            <h1>Halo</h1>
+          <div className="pl-32">
+            <h1 className=" font-bold text-[40px] leading-[48px]">
+              Another Meaningful Learning <br /> with M-Knows Consulting
+            </h1>
           </div>
           <div>
             <Image
               src="/assets/hero-image.png"
               alt="Navbar Logo"
               layout="intrinsic"
-              width={1920}
-              height={1080}
-              className="w-auto h-auto object-contain pt-[6.2rem]"
+              width={600}
+              height={600}
+              className=" object-contain pt-[6rem]"
             />
           </div>
         </div>

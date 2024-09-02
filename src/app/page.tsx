@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <section className="h-[549px] bg-custom-blue">
-        <nav className="bg-white shadow-md py-4  h-[75px] justify-between flex items-center ">
+        <nav className="bg-white shadow-md py-4 h-[75px] justify-between flex items-center fixed top-0 left-0 w-full z-50">
           <div className="flex items-center pl-[50px]">
             <div className="w-32 h-auto">
               <Image
@@ -15,12 +15,10 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-
-            {/* Search Bar */}
-            <form className="mx-auto pl-[200px]  flex justify-center h-[36px]  pr-0">
+            <form className="mx-auto pl-[100px] flex justify-center h-[36px] pr-0">
               <label
                 htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only "
+                className="mb-2 text-sm font-medium text-gray-900 sr-only"
               >
                 Search
               </label>
@@ -37,14 +35,12 @@ export default function Home() {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full pl-12 py-3  text-lg text-gray-900 bg-[#F5F5F5] border-none"
+                  className="block w-full pl-12 py-3 text-lg text-gray-900 bg-[#F5F5F5] border-none"
                   placeholder="Search"
                 />
               </div>
             </form>
           </div>
-
-          {/* Menu */}
           <div className="flex pr-[50px]">
             <a href="#" className="pr-[20px] hover:text-blue-500">
               Home
@@ -63,7 +59,24 @@ export default function Home() {
             </a>
           </div>
         </nav>
+
+        <div className="flex justify-between items-center">
+          <div>
+            <h1>Halo</h1>
+          </div>
+          <div>
+            <Image
+              src="/assets/hero-image.png"
+              alt="Navbar Logo"
+              layout="intrinsic"
+              width={1920}
+              height={1080}
+              className="w-auto h-auto object-contain pt-[6.2rem]"
+            />
+          </div>
+        </div>
       </section>
+      <section className="h-[100vh]"></section>
     </main>
   );
 }

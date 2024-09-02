@@ -62,15 +62,38 @@ export default function Home() {
 
         <div className="flex justify-between items-center">
           <div className="pl-32">
-            <h1 className=" font-bold text-[40px] leading-[48px]">
-              Another Meaningful Learning <br /> with M-Knows Consulting
+            <h1 className="font-bold text-[40px] leading-[48px]">
+              Another <span className="text-[#2D729F]">Meaningful</span>{" "}
+              Learning <br />
+              with <span className="text-[#2D729F]">M-Knows Consulting</span>
             </h1>
+            <form className="relative  max-w-md  pt-6">
+              <label htmlFor="search-input" className="sr-only">
+                Search
+              </label>
+              <div className="relative bg-[#F5F5F5] w-[330px] h-[48px] rounded-[8px]">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <Image
+                    src="/assets/search-icon.png"
+                    alt="Search Icon"
+                    width={26}
+                    height={26}
+                  />
+                </div>
+                <input
+                  type="search"
+                  id="search-input"
+                  className="block w-[360px] h-[48px] pl-16 pt-3 text-md text-gray-900 bg-[#F2F2F3] border-none rounded-[8px]"
+                  placeholder="Telusuri Topik Pelatihan, Konsultasi, Assesment
+"
+                />
+              </div>
+            </form>
           </div>
           <div>
             <Image
               src="/assets/hero-image.png"
               alt="Navbar Logo"
-              layout="intrinsic"
               width={600}
               height={600}
               className=" object-contain pt-[6rem]"

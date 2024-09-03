@@ -1,6 +1,15 @@
 import Image from "next/image";
 
 export default function Home() {
+
+const categories = [
+  { id: 1, name: "Category 1", image: "/assets/image1.png" },
+  { id: 2, name: "Category 2", image: "/assets/image1.png" },
+  { id: 3, name: "Category 3", image: "/assets/image1.png" },
+  { id: 3, name: "Category 3", image: "/assets/image1.png" },
+  { id: 3, name: "Category 3", image: "/assets/image1.png" },
+];
+
   return (
     <main>
       <section className="h-[474px] bg-custom-blue">
@@ -101,7 +110,55 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[100vh]"></section>
+      <section className="h-[320px]  justify-center">
+        <div className="text-center py-[56px]">
+          <h1 className="font-semibold text-[32px] leading-[38.4px]">
+            Some count that matters
+          </h1>
+          <p className="leading-[38.4px] text-[16px]">
+            Our achievement in the journey depicted in numbers
+          </p>
+        </div>
+        <div className="flex justify-between items-center text-center">
+          <div className="flex-1 p-4">
+            <h2 className="font-semibold text-[32px]">100+ Pelatihan</h2>
+            <p className="text-[#868A92] text-[18px]">Dari berbagai klien</p>
+          </div>
+          <div className="relative flex-1 p-4">
+            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 h-[64px] border-l-[1px] border-[#626262]"></div>
+            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 h-[64px] border-r-[1px] border-[#626262]"></div>
+            <h2 className="font-semibold text-[32px]">100+ Pelatihan</h2>
+            <p className="text-[#868A92] text-[18px]">Dari berbagai klien</p>
+          </div>
+          <div className="flex-1 p-4">
+            <h2 className="font-semibold text-[32px]">Column 3</h2>
+            <p className="text-[#868A92] text-[18px]">Dari berbagai klien</p>
+          </div>
+        </div>
+      </section>
+      <section className="py-8">
+        <div className="container mx-auto">
+          <h2 className="text-2xl font-semibold text-center mb-8">
+            Kategori Unggulan
+          </h2>
+          <div className="flex flex-wrap -mx-4 justify-center">
+            {categories.map((category) => (
+              <div key={category.id} className="w-[373.33px] px-4 mb-8">
+                <div
+                  className="relative h-[241px] bg-cover bg-center rounded-[15px] shadow-md overflow-hidden"
+                  style={{ backgroundImage: `url(${category.image})` }}
+                >
+                  <div className="absolute top-0 left-0 p-4">
+                    <h3 className="text-white text-xl font-semibold">
+                      {category.name}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

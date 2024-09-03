@@ -15,6 +15,7 @@ export default function Home() {
 
   return (
     <main>
+      {/* Hero Section */}
       <section className="h-[474px] bg-custom-blue">
         <nav className="bg-white shadow-md py-4 h-[75px] justify-between flex items-center fixed top-0 left-0 w-full z-50">
           <div className="flex items-center pl-[50px]">
@@ -135,18 +136,21 @@ export default function Home() {
           </div>
           <div className="flex-1 p-4">
             <h2 className="font-semibold text-[32px]">200+ Klien</h2>
-            <p className="text-[#868A92] text-[18px]">Dari berbagai perusahaanx</p>
+            <p className="text-[#868A92] text-[18px]">
+              Dari berbagai perusahaanx
+            </p>
           </div>
         </div>
       </section>
       <section className="py-16">
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
           <h2 className="text-[32px] font-medium text-center mb-8">
             Jelajahi Kategori Unggulan
           </h2>
-          <div className="flex flex-wrap  justify-center">
+          {/* Category List */}
+          <div className="flex flex-wrap  justify-center -mx-10">
             {categories.map((category) => (
-              <div key={category.id} className="w-[298px]  m-8">
+              <div key={category.id} className="w-[298px] m-10">
                 <div className="relative h-[192px] rounded-[15px] overflow-hidden">
                   <Image
                     src={category.image}

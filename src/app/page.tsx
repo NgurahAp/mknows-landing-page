@@ -1,14 +1,13 @@
 import Image from "next/image";
 
 export default function Home() {
-
-const categories = [
-  { id: 1, name: "Category 1", image: "/assets/image1.png" },
-  { id: 2, name: "Category 2", image: "/assets/image1.png" },
-  { id: 3, name: "Category 3", image: "/assets/image1.png" },
-  { id: 3, name: "Category 3", image: "/assets/image1.png" },
-  { id: 3, name: "Category 3", image: "/assets/image1.png" },
-];
+  const categories = [
+    { id: 1, name: "Category 1", image: "/assets/program-pelatihan.jpeg" },
+    { id: 2, name: "Category 2", image: "/assets/program-pelatihan.jpeg" },
+    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
+    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
+    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
+  ];
 
   return (
     <main>
@@ -141,14 +140,14 @@ const categories = [
           <h2 className="text-2xl font-semibold text-center mb-8">
             Kategori Unggulan
           </h2>
-          <div className="flex flex-wrap -mx-4 justify-center">
+          <div className="flex flex-wrap  justify-center">
             {categories.map((category) => (
-              <div key={category.id} className="w-[373.33px] px-4 mb-8">
+              <div key={category.id} className="w-[312px]  m-9">
                 <div
-                  className="relative h-[241px] bg-cover bg-center rounded-[15px] shadow-md overflow-hidden"
+                  className="relative h-[192.8px] bg-cover bg-center rounded-[15px] shadow-md overflow-hidden p-10"
                   style={{ backgroundImage: `url(${category.image})` }}
                 >
-                  <div className="absolute top-0 left-0 p-4">
+                  <div className="absolute bottom-0 left-0 p-4">
                     <h3 className="text-white text-xl font-semibold">
                       {category.name}
                     </h3>

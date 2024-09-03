@@ -44,14 +44,8 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-            <form className="mx-auto pl-[100px] flex justify-center h-[36px] pr-0">
-              <label
-                htmlFor="default-search"
-                className="mb-2 text-sm font-medium text-gray-900 sr-only"
-              >
-                Search
-              </label>
-              <div className="relative bg-[#F5F5F5] overflow-hidden rounded-[36px]">
+            <form className="mx-auto pl-[100px]  flex justify-center h-[36px] pr-0">
+              <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px]  rounded-[36px]">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                   <Image
                     src="/assets/search-icon.png"
@@ -64,7 +58,7 @@ export default function Home() {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full pl-12 py-3 text-lg text-gray-900 bg-[#F5F5F5] border-none"
+                  className="block w-full pl-12  text-lg text-gray-900 bg-[#F5F5F5] border-none"
                   placeholder="Search"
                 />
               </div>
@@ -130,6 +124,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* About Us */}
       <section className="h-[320px]  justify-center">
         <div className="text-center py-[54px]">
           <h1 className="font-semibold text-[32px] leading-[38.4px]">
@@ -158,7 +153,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-16">
+      {/* Category */}
+      <section className="py-16 min-h-[100vh]">
         <div className="container mx-auto ">
           <h2 className="text-[32px] font-medium text-center mb-8">
             Jelajahi Kategori Unggulan
@@ -175,6 +171,7 @@ export default function Home() {
                     objectFit="cover"
                     className="rounded-[15px]"
                   />
+
                   <div className="mt-28 absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4">
                     <h3 className="text-white text-[15px] ">{category.name}</h3>
@@ -185,6 +182,60 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Footer */}
+      <footer className="h-[400px] px-[50px] pt-32">
+        <Image
+          src="/assets/navbar-logo.png"
+          alt="M-Knows Logo"
+          width={126}
+          height={32}
+          className="rounded-[15px] "
+        />
+        <div className="flex justify-between  ">
+          <div className="flex-1 p-4">
+            <h2 className=" text-[14px]">Contact Us</h2>
+            <div className="w-[62px] h-[2px] bg-[#626262]  mt-1 mb-2"></div>
+            <p className="text-[#868A92] text-[14px]">
+              Inhouse Training: 021-720 9729
+            </p>
+            <p className="text-[#868A92] text-[14px]">
+              Public Training: 021-726 5274
+            </p>
+            <p className="text-[#868A92] text-[14px]">
+              WhatsApp: 0812-1046-8281
+            </p>
+            <p className="text-[#868A92] text-[14px]">
+              Email: learning@m-knowsconsulting.com
+            </p>
+          </div>
+          <div className="flex-1 p-4">
+            <h2 className=" text-[14px]">Surabaya Branch Office</h2>
+            <div className="w-[62px] h-[2px] bg-[#626262]  mt-1 mb-2"></div>
+            <p className="text-[#868A92] text-[14px]">
+              Jl. Raya Darmo Permai III Surabaya
+            </p>
+            <p className="text-[#868A92] text-[14px]">Telp: 031-8570-5277 </p>
+            <p className="text-[#868A92] text-[14px]">
+              Email: surabaya@m-knowsconsulting.com
+            </p>
+          </div>
+          <div className="flex-1 p-4">
+            <h2 className=" text-[14px]">Alamat Utama</h2>
+            <div className="w-[62px] h-[2px] bg-[#626262]  mt-1 mb-2"></div>
+            <p className="text-[#868A92] text-[14px]">
+              Jl. Radio IV No.8B Barito Kebayoran Baru, Jakarta Selatan
+            </p>
+          </div>
+          <div className="flex-1 p-4">
+            <h2 className=" text-[14px]">Alamat Produksi</h2>
+            <div className="w-[62px] h-[2px] bg-[#626262]  mt-1 mb-2"></div>
+            <p className="text-[#868A92] text-[14px]">
+              Jl. Cirendeu Raya No. 61 Ciputat, Tangerang Sealatan 15419
+            </p>
+          </div>
+        </div>
+        <div className="w-full h-[2px] bg-[#BCBEC3]  mt-1 mb-2"></div>
+      </footer>
     </main>
   );
 }

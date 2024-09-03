@@ -1,17 +1,33 @@
+"use client";
+
 import Image from "next/image";
+import axios from "axios";
+import { useState, useEffect } from "react";
+
+interface Category {
+  id: string;
+  path: string;
+  name: string;
+}
 
 export default function Home() {
-  const categories = [
-    { id: 1, name: "Category 1", image: "/assets/program-pelatihan.jpeg" },
-    { id: 2, name: "Category 2", image: "/assets/program-pelatihan.jpeg" },
-    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
-    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
-    {
-      id: 3,
-      name: "Program kilat pengembangan petugas hibrida untuk industri keuangan",
-      image: "/assets/program-pelatihan.jpeg",
-    },
-  ];
+  const [data, setData] = useState<Category[]>([]); // Type the state with the Category array
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get<Category[]>(
+          "https://65223fddf43b17938414559c.mockapi.io/category"
+        );
+        console.log("Fetched data:", response.data); // Log the fetched data
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error); // Log any errors
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <main>
@@ -149,11 +165,11 @@ export default function Home() {
           </h2>
           {/* Category List */}
           <div className="flex flex-wrap  justify-center -mx-10">
-            {categories.map((category) => (
+            {data.map((category) => (
               <div key={category.id} className="w-[298px] m-10">
                 <div className="relative h-[192px] rounded-[15px] overflow-hidden">
                   <Image
-                    src={category.image}
+                    src={category.path}
                     alt={category.name}
                     layout="fill"
                     objectFit="cover"

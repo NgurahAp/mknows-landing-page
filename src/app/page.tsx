@@ -44,8 +44,8 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-            <form className="mx-auto pl-[100px]  flex justify-center h-[36px] pr-0">
-              <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px]  rounded-[36px]">
+            <form className="mx-auto pl-[100px] flex justify-center h-[36px] pr-0">
+              <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px] rounded-[36px]">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                   <Image
                     src="/assets/search-icon.png"
@@ -58,7 +58,7 @@ export default function Home() {
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full pl-12  text-lg text-gray-900 bg-[#F5F5F5] border-none"
+                  className="block w-full pl-12 text-lg text-gray-900 bg-[#F5F5F5] border-none"
                   placeholder="Search"
                 />
               </div>
@@ -68,18 +68,94 @@ export default function Home() {
             <a href="#" className="pr-[20px] hover:text-blue-500">
               Home
             </a>
-            <a href="#" className="px-[20px] hover:text-blue-500">
-              Bootcamp Program
-            </a>
-            <a href="#" className="px-[20px] hover:text-blue-500">
-              New Training
-            </a>
-            <a href="#" className="px-[20px] hover:text-blue-500">
-              What We Do
-            </a>
-            <a href="#" className="px-[20px] hover:text-blue-500">
-              More
-            </a>
+            <div className="relative group">
+              <a href="#" className="px-[20px] hover:text-blue-500">
+                Bootcamp Program
+              </a>
+              <ul className="absolute hidden w-44 text-center group-hover:block bg-white shadow-lg py-2 ml-5 rounded-lg">
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Bootcamp 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Bootcamp 2
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Bootcamp 3
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="relative group">
+              <a href="#" className="px-[20px] hover:text-blue-500">
+                New Training
+              </a>
+              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Training 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Training 2
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Training 3
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="relative group">
+              <a href="#" className="px-[20px] hover:text-blue-500">
+                What We Do
+              </a>
+              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Service 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Service 2
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Service 3
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="relative group">
+              <a href="#" className="px-[20px] hover:text-blue-500">
+                More
+              </a>
+              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Option 1
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Option 2
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                    Option 3
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
 

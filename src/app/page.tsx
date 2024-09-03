@@ -183,7 +183,7 @@ export default function Home() {
         </div>
       </section>
       {/* Footer */}
-      <footer className="h-[400px] px-[50px] pt-32">
+      <footer className="h-[450px] px-[50px] pt-32">
         <Image
           src="/assets/navbar-logo.png"
           alt="M-Knows Logo"
@@ -234,7 +234,40 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full h-[2px] bg-[#BCBEC3]  mt-1 mb-2"></div>
+        <div className="w-full h-[2px] bg-[#BCBEC3]   mt-12 mb-2"></div>
+        <div className="flex">
+          <div className="flex pt-5">
+            <Image
+              src="/assets/linkedin-icon.png"
+              alt="Linked In"
+              width={50}
+              height={50}
+              className="rounded-[15px] mr-6"
+            />
+            <Image
+              src="/assets/fb-icon.png"
+              alt="Facebook"
+              width={50}
+              height={50}
+              className="rounded-[15px] mr-6"
+            />
+            <Image
+              src="/assets/ig-icon.png"
+              alt="Instagram"
+              width={50}
+              height={50}
+              className="rounded-[15px] mr-6"
+            />
+            <Image
+              src="/assets/yt-icon.png"
+              alt="You-tube"
+              width={50}
+              height={50}
+              className="rounded-[15px] mr-6"
+            />
+          </div>
+          <h1 className="text-[14px] align-middle text-[#868A92]">2024 - www.Mknowsconsulting - Hak Cipta Dilindungi.</h1>
+        </div>
       </footer>
     </main>
   );

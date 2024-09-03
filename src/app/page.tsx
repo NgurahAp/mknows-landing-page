@@ -6,7 +6,11 @@ export default function Home() {
     { id: 2, name: "Category 2", image: "/assets/program-pelatihan.jpeg" },
     { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
     { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
-    { id: 3, name: "Category 3", image: "/assets/program-pelatihan.jpeg" },
+    {
+      id: 3,
+      name: "Program kilat pengembangan petugas hibrida untuk industri keuangan",
+      image: "/assets/program-pelatihan.jpeg",
+    },
   ];
 
   return (
@@ -69,8 +73,8 @@ export default function Home() {
         </nav>
 
         <div className="flex justify-between items-center">
-          <div className="pl-32">
-            <h1 className="font-bold text-[40px] leading-[48px]">
+          <div className="pl-20 pt-20">
+            <h1 className="font-bold text-[35px] leading-[48px]">
               Another <span className="text-[#2D729F]">Meaningful</span>{" "}
               Learning <br />
               with <span className="text-[#2D729F]">M-Knows Consulting</span>
@@ -102,15 +106,15 @@ export default function Home() {
             <Image
               src="/assets/hero-image.png"
               alt="Navbar Logo"
-              width={600}
-              height={600}
+              width={596}
+              height={596}
               className=" object-contain pt-[6rem]"
             />
           </div>
         </div>
       </section>
       <section className="h-[320px]  justify-center">
-        <div className="text-center py-[56px]">
+        <div className="text-center py-[54px]">
           <h1 className="font-semibold text-[32px] leading-[38.4px]">
             Some count that matters
           </h1>
@@ -126,31 +130,34 @@ export default function Home() {
           <div className="relative flex-1 p-4">
             <div className="absolute left-0 top-1/2 transform -translate-y-1/2 h-[64px] border-l-[1px] border-[#626262]"></div>
             <div className="absolute right-0 top-1/2 transform -translate-y-1/2 h-[64px] border-r-[1px] border-[#626262]"></div>
-            <h2 className="font-semibold text-[32px]">100+ Pelatihan</h2>
-            <p className="text-[#868A92] text-[18px]">Dari berbagai klien</p>
+            <h2 className="font-semibold text-[32px]">10+ Instruktur</h2>
+            <p className="text-[#868A92] text-[18px]">Instruktur Ternama</p>
           </div>
           <div className="flex-1 p-4">
-            <h2 className="font-semibold text-[32px]">Column 3</h2>
-            <p className="text-[#868A92] text-[18px]">Dari berbagai klien</p>
+            <h2 className="font-semibold text-[32px]">200+ Klien</h2>
+            <p className="text-[#868A92] text-[18px]">Dari berbagai perusahaanx</p>
           </div>
         </div>
       </section>
-      <section className="py-8">
+      <section className="py-16">
         <div className="container mx-auto">
-          <h2 className="text-2xl font-semibold text-center mb-8">
-            Kategori Unggulan
+          <h2 className="text-[32px] font-medium text-center mb-8">
+            Jelajahi Kategori Unggulan
           </h2>
           <div className="flex flex-wrap  justify-center">
             {categories.map((category) => (
-              <div key={category.id} className="w-[312px]  m-9">
-                <div
-                  className="relative h-[192.8px] bg-cover bg-center rounded-[15px] shadow-md overflow-hidden p-10"
-                  style={{ backgroundImage: `url(${category.image})` }}
-                >
+              <div key={category.id} className="w-[298px]  m-8">
+                <div className="relative h-[192px] rounded-[15px] overflow-hidden">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-[15px]"
+                  />
+                  <div className="mt-28 absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-4">
-                    <h3 className="text-white text-xl font-semibold">
-                      {category.name}
-                    </h3>
+                    <h3 className="text-white text-[15px] ">{category.name}</h3>
                   </div>
                 </div>
               </div>

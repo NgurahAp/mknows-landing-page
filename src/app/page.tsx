@@ -44,7 +44,7 @@ export default function Home() {
                 className="object-contain"
               />
             </div>
-            <form className="mx-auto pl-[100px] flex justify-center h-[36px] pr-0">
+            <form className="mx-auto pl-[60px] flex justify-center h-[36px] ">
               <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px] rounded-[36px]">
                 <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                   <Image
@@ -69,8 +69,18 @@ export default function Home() {
               Home
             </a>
             <div className="relative group">
-              <a href="#" className="px-[20px] hover:text-blue-500">
+              <a
+                href="#"
+                className="px-[20px] hover:text-blue-500 flex items-center"
+              >
                 Bootcamp Program
+                <Image
+                  src="/assets/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={14}
+                  className="ml-2"
+                />
               </a>
               <ul className="absolute hidden w-44 text-center group-hover:block bg-white shadow-lg py-2 ml-4 rounded-lg">
                 <li>
@@ -91,8 +101,18 @@ export default function Home() {
               </ul>
             </div>
             <div className="relative group">
-              <a href="#" className="px-[20px] hover:text-blue-500">
+              <a
+                href="#"
+                className="px-[20px] hover:text-blue-500 flex items-center"
+              >
                 New Training
+                <Image
+                  src="/assets/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={14}
+                  className="ml-2"
+                />
               </a>
               <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>
@@ -113,8 +133,18 @@ export default function Home() {
               </ul>
             </div>
             <div className="relative group">
-              <a href="#" className="px-[20px] hover:text-blue-500">
+              <a
+                href="#"
+                className="px-[20px] hover:text-blue-500 flex items-center"
+              >
                 What We Do
+                <Image
+                  src="/assets/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={14}
+                  className="ml-2"
+                />
               </a>
               <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>
@@ -135,8 +165,18 @@ export default function Home() {
               </ul>
             </div>
             <div className="relative group">
-              <a href="#" className="px-[20px] hover:text-blue-500">
+              <a
+                href="#"
+                className="px-[20px] hover:text-blue-500 flex items-center"
+              >
                 More
+                <Image
+                  src="/assets/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={14}
+                  className="ml-2"
+                />
               </a>
               <ul className="absolute hidden group-hover:block bg-white text-center -ml-5 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>

@@ -17,12 +17,15 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const response = await axios.get<Category[]>(
-          "https://65223fddf43b17938414559c.mockapi.io/category"
+          "https://65223fddf43b17938414559c.mockapi.io/category",
+          {
+            timeout: 10000,
+          }
         );
-        console.log("Fetched data:", response.data); // Log the fetched data
+        console.log("Fetched data:", response.data);
         setData(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error); // Log any errors
+        console.error("Error fetching data:", error);
       }
     };
 

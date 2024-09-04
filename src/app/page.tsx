@@ -72,7 +72,7 @@ export default function Home() {
               <a href="#" className="px-[20px] hover:text-blue-500">
                 Bootcamp Program
               </a>
-              <ul className="absolute hidden w-44 text-center group-hover:block bg-white shadow-lg py-2 ml-5 rounded-lg">
+              <ul className="absolute hidden w-44 text-center group-hover:block bg-white shadow-lg py-2 ml-4 rounded-lg">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Bootcamp 1
@@ -94,7 +94,7 @@ export default function Home() {
               <a href="#" className="px-[20px] hover:text-blue-500">
                 New Training
               </a>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+              <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Training 1
@@ -116,7 +116,7 @@ export default function Home() {
               <a href="#" className="px-[20px] hover:text-blue-500">
                 What We Do
               </a>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+              <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Service 1
@@ -138,7 +138,7 @@ export default function Home() {
               <a href="#" className="px-[20px] hover:text-blue-500">
                 More
               </a>
-              <ul className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-lg">
+              <ul className="absolute hidden group-hover:block bg-white text-center -ml-5 w-[9rem] shadow-lg py-2 rounded-lg">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Option 1

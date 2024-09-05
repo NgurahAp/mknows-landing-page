@@ -56,7 +56,26 @@ const Navbar = () => {
       </div>
 
       {isMediumScreen ? (
-        <div className="pr-4">
+        <div className="pr-4 flex justify-between">
+          <form className="pr-10 justify-center h-[36px] ">
+            <div className="relative bg-[#F5F5F5] overflow-hidden w-[210px] rounded-[36px]">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+                <Image
+                  src="/assets/search-icon.png"
+                  alt="Search Icon"
+                  width={24}
+                  height={24}
+                  className=""
+                />
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                className="block w-full pl-12 text-lg text-gray-900 bg-[#F5F5F5] border-none"
+                placeholder="Search"
+              />
+            </div>
+          </form>
           <button onClick={toggleMenu} className="text-3xl">
             ☰
           </button>

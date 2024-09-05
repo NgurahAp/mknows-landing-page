@@ -1,14 +1,11 @@
 import Image from "next/image";
-import Navbar from "../components/Navbar";
 
 const HeroSection = () => {
   return (
     <section className="h-[474px] bg-custom-blue">
-      <Navbar />
-
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="pl-20 pt-20">
-          <h1 className="font-bold text-[35px] leading-[48px]">
+          <h1 className="font-bold text-3xl leading-[48px] md:text-[35px]">
             Another <span className="text-[#2D729F]">Meaningful</span> Learning{" "}
             <br />
             with <span className="text-[#2D729F]">M-Knows Consulting</span>
@@ -42,7 +39,7 @@ const HeroSection = () => {
             alt="Navbar Logo"
             width={596}
             height={596}
-            className=" object-contain pt-[6rem]"
+            className="  pt-[6rem]"
           />
         </div>
       </div>

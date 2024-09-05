@@ -36,7 +36,7 @@ const HeroSection = () => {
         <div>
           <Image
             src="/assets/hero-image.png"
-            alt="Navbar Logo"
+            alt="Hero IMag"
             width={596}
             height={596}
             className="  pt-[6rem]"

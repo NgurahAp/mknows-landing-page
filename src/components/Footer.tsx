@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="h-[450px] px-[50px] pt-32 relative">
+    <footer className="h-[450px] px-[50px] md:pt-32 pt-14 relative">
       <Image
         src="/assets/navbar-logo.png"
         alt="M-Knows Logo"
@@ -10,7 +10,7 @@ const Footer = () => {
         height={32}
         className="rounded-[15px]"
       />
-      <div className="flex justify-between">
+      <div className="flex md:flex-row flex-col justify-between">
         <div className="flex-1 p-4">
           <h2 className="text-[14px]">Contact Us</h2>
           <div className="w-[62px] h-[2px] bg-[#626262] mt-1 mb-2"></div>
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-[2px] bg-[#BCBEC3] mt-12 mb-2"></div>
-      <div className="flex items-center relative">
+      <div className="flex md:flex-row flex-col items-center ">
         <div className="flex pt-5">
           <Image
             src="/assets/linkedin-icon.png"
@@ -83,7 +83,7 @@ const Footer = () => {
             className="rounded-[15px] mr-6"
           />
         </div>
-        <h1 className="absolute left-1/2 transform -translate-x-1/2 pt-4 text-[14px] text-[#868A92]">
+        <h1 className="absolute left-1/2 transform -translate-x-1/2 md:pt-4 pt-28 md:text-[14px] text-md text-center text-[#868A92]">
           2024 - www.Mknowsconsulting - Hak Cipta Dilindungi.
         </h1>
       </div>

@@ -12,7 +12,7 @@ const CategorySection = () => {
   return (
     <section className="pb-16 pt-7 min-h-[100vh]">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-medium text-center mb-8">
+        <h2 className="md:text-4xl text-3xl font-medium text-center mb-8">
           Jelajahi Kategori Unggulan
         </h2>
         <div className="flex flex-wrap justify-center -mx-10">

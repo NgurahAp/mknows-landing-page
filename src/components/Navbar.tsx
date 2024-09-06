@@ -58,7 +58,7 @@ const Navbar = () => {
       {isMediumScreen ? (
         <div className="pr-4 flex justify-between">
           <form className="pr-10 justify-center h-[36px] ">
-            <div className="relative bg-[#F5F5F5] overflow-hidden w-[210px] rounded-[36px]">
+            <div className="relative bg-[#F5F5F5] overflow-hidden w-[190px] rounded-[36px]">
               <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                 <Image
                   src="/assets/search-icon.png"

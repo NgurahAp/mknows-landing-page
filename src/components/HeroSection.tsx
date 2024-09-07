@@ -3,7 +3,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <section
-      className="md:h-[474px] h-[240px] md:pt-0 pt-40  bg-cover bg-no-repeat bg-center max-w-screen"
+      className="md:h-[474px] h-[240px] md:pt-0 pt-32  bg-cover bg-no-repeat bg-center max-w-screen"
       style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
     >
       <div className="flex md:items-center min-h-screen  ">
@@ -11,7 +11,7 @@ const HeroSection = () => {
           <h1 className="font-bold text-xl md:leading-[48px]  text-left   md:text-[35px]">
             Another <span className="text-[#2D729F]">Meaningful</span> Learning
             <br />
-            with <span className="text-[#2D729F]">M-Knows Consulting</span>
+            with <span className="text-[#2D729F]">M-Knows Consulting </span>
           </h1>
           <form className="md:pl-0  max-w-md md:pt-6 pt-2">
             <label htmlFor="search-input" className="sr-only">

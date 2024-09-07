@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <section className="md:h-[320px] h-[230px]  justify-center">
+    <section className="md:h-[320px] h-[330px]  justify-center">
       <div className="text-center md:py-[54px] py-10">
         <h1 className="font-semibold md:text-4xl text-3xl leading-[38.4px]">
           Some count that matters

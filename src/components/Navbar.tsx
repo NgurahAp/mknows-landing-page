@@ -21,8 +21,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md py-4 h-[75px] justify-between flex items-center fixed top-0 left-0 w-full z-50">
-      <div className="flex items-center pl-4 lg:pl-[50px]">
+    <nav className="bg-white shadow-md py-4 h-[75px] overflow-x-hidden max-w-screen justify-between flex items-center fixed top-0 left-0 w-full z-50">
+      <div className="flex items-center  pl-4 md:pl-[50px]">
         <div className="w-32 h-auto">
           <Image
             src="/assets/navbar-logo.png"
@@ -56,9 +56,9 @@ const Navbar = () => {
       </div>
 
       {isMediumScreen ? (
-        <div className="pr-4 flex justify-between">
-          <form className="pr-10 justify-center h-[36px] ">
-            <div className="relative bg-[#F5F5F5] overflow-hidden md:w-[190px] rounded-[36px]">
+        <div className="pr-4 flex  ">
+          <form className="pr-10  justify-center  h-[36px] ">
+            <div className="relative bg-[#F5F5F5] overflow-x-hidden md:w-[190px] rounded-[36px]">
               <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                 <Image
                   src="/assets/search-icon.png"

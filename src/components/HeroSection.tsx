@@ -8,7 +8,7 @@ const HeroSection = () => {
     >
       <div className="flex md:items-center min-h-screen  ">
         <div className="md:pl-20 pl-5 ">
-          <h1 className="font-bold text-xl md:leading-[48px]  text-left  md:text-[35px]">
+          <h1 className="font-bold text-xl md:leading-[48px]  text-left   md:text-[35px]">
             Another <span className="text-[#2D729F]">Meaningful</span> Learning
             <br />
             with <span className="text-[#2D729F]">M-Knows Consulting</span>

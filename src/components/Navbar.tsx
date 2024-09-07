@@ -21,15 +21,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md py-4 h-[75px] overflow-x-hidden max-w-screen justify-between flex items-center fixed top-0 left-0 w-full z-50">
+    <nav className="bg-white shadow-md py-4 h-[75px]  max-w-screen justify-between flex items-center fixed top-0 left-0 w-full z-50">
       <div className="flex items-center  pl-4 md:pl-[50px]">
         <div className="w-32 h-auto">
           <Image
             src="/assets/navbar-logo.png"
             alt="Navbar Logo"
-            width={106}
-            height={32}
-            className="object-contain"
+            width={79}
+            height={24}
+            className="md:w-[106px] md:h-[32px] object-contain"
           />
         </div>
         {!isMediumScreen && (
@@ -222,9 +222,9 @@ const Navbar = () => {
             <a href="#" className="py-2 hover:text-blue-500">
               Home
             </a>
-            <div className="py-2 hover:text-blue-500 relative group">
+            <div className="py-2 text-center hover:text-blue-500 relative group">
               Bootcamp Program
-              <ul className="hidden group-hover:block bg-white shadow-md mt-2">
+              <ul className="hidden group-hover:block text-center bg-white shadow-md mt-2">
                 <li>
                   <a href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Bootcamp 1
@@ -242,7 +242,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="py-2 hover:text-blue-500 relative group">
+            <div className="py-2 text-center hover:text-blue-500 relative group">
               New Training
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>
@@ -262,7 +262,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="py-2 hover:text-blue-500 relative group">
+            <div className="py-2 text-center hover:text-blue-500 relative group">
               What We Do
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>
@@ -282,7 +282,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="py-2 hover:text-blue-500 relative group">
+            <div className="py-2 text-center hover:text-blue-500 relative group">
               More
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>

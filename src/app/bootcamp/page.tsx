@@ -39,9 +39,10 @@ export default function BootcampPage() {
         </div>
       </section>
       <section className="pb-16 pt-7 min-h-[100vh]">
+        
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center ">
-            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 md:my-10  relative">
+            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 h-[450px] border md:my-10  relative">
               <Link href="">
                 <Image
                   className="rounded-t-lg"
@@ -85,7 +86,7 @@ export default function BootcampPage() {
                   </Link>
                 </div>
               </div>
-              <div className="absolute md:bottom-[143px] bottom-[181px] left-0">
+              <div className="absolute md:top-[147px] top-[148px] left-0">
                 <Image
                   src="/assets/bootcamp/rectangle.png"
                   alt="Rectangle"
@@ -94,7 +95,7 @@ export default function BootcampPage() {
                 />
               </div>
             </div>
-            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 md:my-10  relative">
+            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 h-[450px] border md:my-10  relative">
               <Link href="">
                 <Image
                   className="rounded-t-lg"
@@ -138,7 +139,7 @@ export default function BootcampPage() {
                   </Link>
                 </div>
               </div>
-              <div className="absolute md:bottom-[143px] bottom-[181px] left-0">
+              <div className="absolute md:top-[147px] top-[148px] left-0">
                 <Image
                   src="/assets/bootcamp/rectangle.png"
                   alt="Rectangle"
@@ -147,7 +148,7 @@ export default function BootcampPage() {
                 />
               </div>
             </div>
-            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 md:my-10  relative">
+            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 h-[450px] border md:my-10  relative">
               <Link href="">
                 <Image
                   className="rounded-t-lg"
@@ -191,7 +192,7 @@ export default function BootcampPage() {
                   </Link>
                 </div>
               </div>
-              <div className="absolute md:bottom-[143px] bottom-[181px] left-0">
+              <div className="absolute md:top-[147px] top-[148px] left-0">
                 <Image
                   src="/assets/bootcamp/rectangle.png"
                   alt="Rectangle"
@@ -200,7 +201,7 @@ export default function BootcampPage() {
                 />
               </div>
             </div>
-            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 md:my-10  relative">
+            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 h-[450px] border md:my-10  relative">
               <Link href="">
                 <Image
                   className="rounded-t-lg"
@@ -244,7 +245,7 @@ export default function BootcampPage() {
                   </Link>
                 </div>
               </div>
-              <div className="absolute md:bottom-[143px] bottom-[181px] left-0">
+              <div className="absolute md:top-[147px] top-[148px] left-0">
                 <Image
                   src="/assets/bootcamp/rectangle.png"
                   alt="Rectangle"
@@ -253,7 +254,7 @@ export default function BootcampPage() {
                 />
               </div>
             </div>
-            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 md:my-10  relative">
+            <div className="max-w-sm w-full md:mx-16 mx-14 my-3 h-[450px] border md:my-10  relative">
               <Link href="">
                 <Image
                   className="rounded-t-lg"
@@ -297,7 +298,7 @@ export default function BootcampPage() {
                   </Link>
                 </div>
               </div>
-              <div className="absolute md:bottom-[143px] bottom-[181px] left-0">
+              <div className="absolute md:top-[147px] top-[148px] left-0">
                 <Image
                   src="/assets/bootcamp/rectangle.png"
                   alt="Rectangle"
@@ -306,6 +307,7 @@ export default function BootcampPage() {
                 />
               </div>
             </div>
+           
           </div>
         </div>
       </section>

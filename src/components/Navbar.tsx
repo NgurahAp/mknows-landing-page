@@ -83,19 +83,19 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="flex pr-[50px]">
-          <a href="/" className="pr-[20px] hover:text-blue-500">
+          <Link href="/" className="pr-[20px] hover:text-blue-500">
             Home
-          </a>
+          </Link>
           <div className="relative group">
             <Link
-              href="/bootcamp" // Tambahkan link ke halaman bootcamp
+              href="/bootcamp"
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
               Bootcamp Program
             </Link>
           </div>
           <div className="relative group">
-            <a
+            <Link
               href="#"
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
@@ -107,27 +107,27 @@ const Navbar = () => {
                 height={14}
                 className="ml-2"
               />
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Training 1
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Training 2
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Training 3
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="relative group">
-            <a
+            <Link
               href="#"
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
@@ -139,27 +139,27 @@ const Navbar = () => {
                 height={14}
                 className="ml-2"
               />
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Service 1
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Service 2
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Service 3
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
           <div className="relative group">
-            <a
+            <Link
               href="#"
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
@@ -171,22 +171,22 @@ const Navbar = () => {
                 height={14}
                 className="ml-2"
               />
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-white text-center -ml-5 w-[9rem] shadow-lg py-2 rounded-lg">
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Option 1
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Option 2
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                   Option 3
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -196,9 +196,9 @@ const Navbar = () => {
       {isMediumScreen && isMenuOpen && (
         <div className="fixed top-[75px] left-0 w-full bg-white shadow-md">
           <div className="flex flex-col items-center py-4">
-            <a href="/" className="py-2 hover:text-blue-500">
+            <Link href="/" className="py-2 hover:text-blue-500">
               Home
-            </a>
+            </Link>
             <div className="py-2 text-center hover:text-blue-500 relative group">
               <Link href="/bootcamp">Bootcamp Program</Link>
             </div>
@@ -206,19 +206,19 @@ const Navbar = () => {
               New Training
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Training 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Training 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Training 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -226,19 +226,19 @@ const Navbar = () => {
               What We Do
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Service 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Service 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Service 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -246,19 +246,19 @@ const Navbar = () => {
               More
               <ul className="hidden group-hover:block bg-white shadow-md mt-2">
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Option 1
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Option 2
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                  <Link href="#" className="block px-4 py-2 hover:bg-gray-100">
                     Option 3
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

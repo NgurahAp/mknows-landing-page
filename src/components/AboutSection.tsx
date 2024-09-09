@@ -25,7 +25,7 @@ const AboutSection = () => {
         <div className="flex-1 p-4">
           <h2 className="font-semibold text-lg md:text-4xl">200+ Klien</h2>
           <p className="text-[#868A92] pt-1 text-xs md:text-xl">
-            Dari berbagai perusahaanx
+            Dari berbagai perusahaan
           </p>
         </div>
       </div>

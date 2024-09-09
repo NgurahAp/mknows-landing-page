@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -82,40 +83,16 @@ const Navbar = () => {
         </div>
       ) : (
         <div className="flex pr-[50px]">
-          <a href="#" className="pr-[20px] hover:text-blue-500">
+          <a href="/" className="pr-[20px] hover:text-blue-500">
             Home
           </a>
           <div className="relative group">
-            <a
-              href="#"
+            <Link
+              href="/bootcamp" // Tambahkan link ke halaman bootcamp
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
               Bootcamp Program
-              <Image
-                src="/assets/dropdown-icon.png"
-                alt="Dropdown Icon"
-                width={14}
-                height={14}
-                className="ml-2"
-              />
-            </a>
-            <ul className="absolute hidden w-44 text-center group-hover:block bg-white shadow-lg py-2 ml-4 rounded-lg">
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Bootcamp 1
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Bootcamp 2
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                  Bootcamp 3
-                </a>
-              </li>
-            </ul>
+            </Link>
           </div>
           <div className="relative group">
             <a
@@ -219,28 +196,11 @@ const Navbar = () => {
       {isMediumScreen && isMenuOpen && (
         <div className="fixed top-[75px] left-0 w-full bg-white shadow-md">
           <div className="flex flex-col items-center py-4">
-            <a href="#" className="py-2 hover:text-blue-500">
+            <a href="/" className="py-2 hover:text-blue-500">
               Home
             </a>
             <div className="py-2 text-center hover:text-blue-500 relative group">
-              Bootcamp Program
-              <ul className="hidden group-hover:block text-center bg-white shadow-md mt-2">
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Bootcamp 1
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Bootcamp 2
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="block px-4 py-2 hover:bg-gray-100">
-                    Bootcamp 3
-                  </a>
-                </li>
-              </ul>
+              <Link href="/bootcamp">Bootcamp Program</Link>
             </div>
             <div className="py-2 text-center hover:text-blue-500 relative group">
               New Training

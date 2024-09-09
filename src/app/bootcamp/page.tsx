@@ -38,8 +38,8 @@ export default function BootcampPage() {
           </p>
         </div>
       </section>
-      <section className="p-5 flex">
-        <div className="max-w-sm m-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+      <section className="md:px-5  p-10 flex md:items-center  md:justify-center justify-normal  md:flex-row flex-col">
+        <div className="max-w-lg m-5 md:mx-10  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
           <Link href="">
             <Image
               className="rounded-t-lg"
@@ -81,7 +81,7 @@ export default function BootcampPage() {
               </svg>
             </Link>
           </div>
-          <div className="absolute bottom-[143px] left-0">
+          <div className="absolute md:bottom-[143px] bottom-[183px] left-0">
             <Image
               src="/assets/bootcamp/rectangle.png"
               alt="Rectangle"
@@ -90,7 +90,7 @@ export default function BootcampPage() {
             />
           </div>
         </div>
-        <div className="max-w-sm m-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+        <div className="max-w-lg m-5 md:mx-10  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
           <Link href="">
             <Image
               className="rounded-t-lg"
@@ -132,7 +132,109 @@ export default function BootcampPage() {
               </svg>
             </Link>
           </div>
-          <div className="absolute bottom-[143px] left-0">
+          <div className="absolute md:bottom-[143px] bottom-[183px] left-0">
+            <Image
+              src="/assets/bootcamp/rectangle.png"
+              alt="Rectangle"
+              width={400}
+              height={200}
+            />
+          </div>
+        </div>
+        <div className="max-w-lg m-5 md:mx-10  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+          <Link href="">
+            <Image
+              className="rounded-t-lg"
+              src="/assets/bootcamp/frontend.png"
+              alt=""
+              width={500}
+              height={300}
+              layout="responsive"
+            />
+          </Link>
+          <div className="p-5">
+            <Link href="">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Test
+              </h5>
+            </Link>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Description
+            </p>
+            <Link
+              href=""
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Read more
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </Link>
+          </div>
+          <div className="absolute md:bottom-[143px] bottom-[183px] left-0">
+            <Image
+              src="/assets/bootcamp/rectangle.png"
+              alt="Rectangle"
+              width={400}
+              height={200}
+            />
+          </div>
+        </div>
+        <div className="max-w-lg m-5 md:mx-10  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+          <Link href="">
+            <Image
+              className="rounded-t-lg"
+              src="/assets/bootcamp/frontend.png"
+              alt=""
+              width={500}
+              height={300}
+              layout="responsive"
+            />
+          </Link>
+          <div className="p-5">
+            <Link href="">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Test
+              </h5>
+            </Link>
+            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Description
+            </p>
+            <Link
+              href=""
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Read more
+              <svg
+                className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </Link>
+          </div>
+          <div className="absolute md:bottom-[143px] bottom-[183px] left-0">
             <Image
               src="/assets/bootcamp/rectangle.png"
               alt="Rectangle"

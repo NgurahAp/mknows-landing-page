@@ -81,7 +81,7 @@ export default function BootcampPage() {
               </svg>
             </Link>
           </div>
-          <div className="absolute bottom-[150px] left-0">
+          <div className="absolute bottom-[143px] left-0">
             <Image
               src="/assets/bootcamp/rectangle.png"
               alt="Rectangle"
@@ -132,7 +132,7 @@ export default function BootcampPage() {
               </svg>
             </Link>
           </div>
-          <div className="absolute bottom-[150px] left-0">
+          <div className="absolute bottom-[143px] left-0">
             <Image
               src="/assets/bootcamp/rectangle.png"
               alt="Rectangle"

@@ -42,7 +42,7 @@ const Navbar = () => {
         {!isMediumScreen && (
           <form className="mx-auto pl-[60px] flex  justify-center h-[43px]">
             <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px] rounded-[36px]">
-              <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+              <div className="absolute inset-y-0 start-1 flex items-center ps-2 pointer-events-none">
                 <Image
                   src="/assets/search-icon.png"
                   alt="Search Icon"

@@ -1,4 +1,14 @@
-export const bootcampData = [
+interface Bootcamp {
+  id: number;
+  title: string;
+  level: string;
+  description: string;
+  image: string;
+  bg: string;
+  link: string;
+}
+
+export const bootcampData: Bootcamp[] = [
   {
     id: 1,
     title: "Bootcamp Front-End Developer",

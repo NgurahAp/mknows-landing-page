@@ -25,8 +25,8 @@ export default function BootcampPage() {
         </div>
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center">
-            {bootcampData.map((bootcamp) => (
-              <BootcampCard key={bootcamp.id} bootcamp={bootcamp} />
+            {bootcampData?.map((bootcamp) => (
+              <BootcampCard key={bootcamp?.id} bootcamp={bootcamp} />
             ))}
           </div>
         </div>

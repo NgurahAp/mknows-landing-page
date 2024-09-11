@@ -1,5 +1,6 @@
 export const bootcampData = [
   {
+    id: 1,
     title: "Bootcamp Front-End Developer",
     level: "ADVANCE LEVEL",
     description:
@@ -9,6 +10,7 @@ export const bootcampData = [
     link: "/bootcamp/frontend-developer",
   },
   {
+    id: 2,
     title: "Bootcamp Back-End Developer",
     level: "ADVANCE LEVEL",
     description:
@@ -18,6 +20,7 @@ export const bootcampData = [
     link: "/bootcamp/backend.png",
   },
   {
+    id: 3,
     title: "Flutter Multi-Platform APP",
     level: "DEVELOPMENT",
     description:
@@ -27,6 +30,7 @@ export const bootcampData = [
     link: "/bootcamp/frontend-developer",
   },
   {
+    id: 4,
     title: "Data Science & Data Analytics",
     level: "DATA ANALYTICS",
     description:
@@ -36,6 +40,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 5,
     title: "Bootcamp Professional Videografer &",
     level: "SINEMATOGRAFER",
     description:
@@ -45,15 +50,17 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 6,
     title: "Bootcamp Video Editor, Content Creator &",
     level: "ANIMATOR PROFFESIONAL",
     description:
-      "Bootcamp Editing & Animasi ini mencakupi pembelajaran perangkat lunak editing video dan animasi yang paling populer, Adobe Premiere Pro untuk keperluan Konten yang akan anda dapatkan. ",
+      "Bootcamp Editing & Animasi ini mencakupi pembelajaran perangkat lunak editing video dan animasi yang paling populer, Adobe Premiere Pro untuk keperluan Konten yang akan anda dapatkan. ",
     image: "/assets/bootcamp/vidioeditor.png",
     bg: "#D0BFFF",
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 7,
     title: "Comprehensive 3D Design",
     level: "WITH BLENDER",
     description:
@@ -63,6 +70,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 8,
     title: "Bootcamp Professional Photografer",
     level: "WITH LIVE MENTORING",
     description:
@@ -72,6 +80,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 9,
     title: "UI & UX For Web",
     level: "APP PROJECT",
     description:
@@ -81,6 +90,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 10,
     title: "Aplikasi Terapan AI untuk Industri Perbankan",
     level: "MULTIFINANCE,ASURANSI, & FINTECH",
     description:
@@ -90,6 +100,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 11,
     title: "Bootcamp Digital Marketing &",
     level: "EVENT MANAGEMENT",
     description:
@@ -99,6 +110,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 12,
     title: "Digital Sales Management &",
     level: "SPONSORSHIP",
     description:
@@ -108,6 +120,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 13,
     title: "Bootcamp Virtual Reality Technology",
     level: "TRANSFORMASI BISNIS",
     description:
@@ -117,6 +130,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 14,
     title: "AI Sales Tools : Meningkatkan Penjualan &",
     level: "PROFIT BERLIPAT GANDA MENGGUNAKAN 11 TOOLS AI",
     description:
@@ -126,6 +140,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 15,
     title: "Bootcamp IT QA Engineer",
     level: "MENJADI QA PROFESIONAL SIAP KERJA",
     description:
@@ -135,6 +150,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 16,
     title: "Bootcamp Financial Planning, Financial Modelling",
     level: "BUSINESS SIMULATION ,FINANSIAL SCENARIO TESTING...",
     description:
@@ -144,6 +160,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 17,
     title: "Penguasa IOT:",
     level: "IDE,SOLUSI,PERANGKAIAN,MANAJEMEN PROYEK DAN KOMERSIALISASI ",
     description:
@@ -153,6 +170,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 18,
     title: "Cyber Security",
     level: "WEB EXPLOITATION AND DEFENSE",
     description:
@@ -162,6 +180,7 @@ export const bootcampData = [
     link: "/bootcamp/ui-ux-design",
   },
   {
+    id: 19,
     title: "Game Development",
     level: "\u00A0",
     description:

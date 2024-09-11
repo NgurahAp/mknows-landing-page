@@ -13,10 +13,18 @@ interface BootcampCardProps {
   };
 }
 
+const truncateText = (text: string, maxWords: number): string => {
+  const words = text.split(" ");
+  if (words.length > maxWords) {
+    return words.slice(0, maxWords).join(" ") + "...";
+  }
+  return text;
+};
+
 export default function BootcampCard({ bootcamp }: BootcampCardProps) {
   return (
     <div
-      className="max-w-sm w-full md:mx-8 mx-0 my-3 md:h-[460px] h-[500px] border md:my-10 relative flex flex-col"
+      className="max-w-sm w-full md:mx-8 mx-0 my-7 md:h-[465px] h-[513px] border md:my-10 relative flex flex-col rounded-sm"
       style={{ backgroundColor: bootcamp.bg }}
     >
       <Image
@@ -27,15 +35,17 @@ export default function BootcampCard({ bootcamp }: BootcampCardProps) {
         height={300}
         layout="responsive"
       />
-      <div className="md:p-5 p-2 md:-mt-20 -mt-12 flex flex-col flex-grow">
+      <div className="md:p-5 py-2 px-3 md:-mt-20 -mt-12 flex flex-col flex-grow">
         <div>
-          <h5 className="md:text-base text-sm font-medium tracking-tight">
+          <h5 className="md:text-sm text-xs font-medium tracking-tight">
             {bootcamp.title}
           </h5>
-          <h5 className="text-[#388FC7] mb-3 md:text-lg text-base font-medium tracking-tight">
+          <h5 className="text-[#388FC7] mb-3 md:text-base text-sm font-medium tracking-tight">
             {bootcamp.level}
           </h5>
-          <p className="md:text-sm text-xs font-base">{bootcamp.description}</p>
+          <p className="md:text-sm text-xs font-sm">
+            {truncateText(bootcamp.description, 49)}
+          </p>
         </div>
         <div className="mt-auto flex justify-end">
           <Link

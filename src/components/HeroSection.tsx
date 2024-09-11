@@ -30,7 +30,7 @@ const HeroSection = () => {
   return (
     <section
       className="md:h-[474px] h-[250px] md:pt-0 pt-28 bg-cover bg-no-repeat bg-center max-w-screen"
-      style={{ backgroundImage: "url('/assets/hero-bg.png')" }}
+      style={{ backgroundImage: "url('/assets/home/hero-bg.png')" }}
     >
       <div className="flex md:items-center min-h-screen">
         <div className="md:pl-20 pl-5">

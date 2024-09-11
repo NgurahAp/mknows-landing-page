@@ -2,7 +2,7 @@ export default function BootcampHeroSection() {
   return (
     <section
       className="md:h-[474px] h-[250px] md:pt-[19rem] pt-32 bg-cover bg-no-repeat bg-center max-w-screen"
-      style={{ backgroundImage: "url('/assets/hero-image-bootcamp.png')" }}
+      style={{ backgroundImage: "url('/assets/bootcamp/hero-image-bootcamp.png')" }}
     >
       <div className="flex min-h-screen">
         <div className="md:pl-20 pl-5">

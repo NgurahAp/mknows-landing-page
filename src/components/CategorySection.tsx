@@ -28,7 +28,7 @@ const CategorySection = () => {
                 />
                 <div className="mt-28 absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">
-                  <h3 className="text-white text-2xl">{category.name}</h3>
+                  <h3 className="text-white md:text-2xl text-base">{category.name}</h3>
                 </div>
               </div>
             </div>

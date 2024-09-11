@@ -53,12 +53,20 @@ export default function BootcampCard({ bootcamp }: BootcampCardProps) {
           </Link>
         </div>
       </div>
-      <div className="absolute md:top-[147px] top-[148px] left-0">
+      <div className="absolute md:top-[147px] top-[160px] left-0">
         <Image
           src="/assets/bootcamp/rectangle.png"
           alt="Rectangle"
           width={400}
           height={200}
+        />
+      </div>
+      <div className="absolute md:top-[10px] top-[10px] left-2">
+        <Image
+          src="/assets/navbar-logo.png"
+          alt="Rectangle"
+          width={80}
+          height={40}
         />
       </div>
     </div>

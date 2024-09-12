@@ -113,73 +113,87 @@ const Navbar = () => {
               />
             </Link>
             {/* Dropdown value Bootcamp */}
-            <div className="absolute hidden -ml-[58vw] group-hover:block left-0 w-[110vw] h-[50vh] bg-white shadow-lg pt-4">
+            <div className="absolute hidden -ml-[58vw] group-hover:block left-0 w-[106vw] h-[60vh] bg-white shadow-lg pt-4">
               <div className="container mx-auto px-4 py-10">
                 <hr className="border-t-4 border-[#C1FA31] my-4 w-full mx-auto rounded-full" />
-                <div className="flex ">
+                <div className="flex">
                   {/* Column 1 - 1/4 width */}
                   <div className="w-1/4 pr-4">
-                    <h3 className="font-bold mb-2">Column 1</h3>
+                    <h3 className="font-semibold text-lg mb-2 underline">
+                      Information Technology
+                    </h3>
                     <ul className="space-y-2 -ml-2">
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg "
                         >
-                          Bootcamp 1
+                          UI/UX for Web & App Project
                         </Link>
                       </li>
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 2
+                          Back End Developer Advance Level
                         </Link>
                       </li>
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 3
+                          Front End Developer for Advance Level
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          onClick={handleLinkClick}
+                          className="block hover:bg-gray-100 p-2 text-lg"
+                        >
+                          IT QA Engineer
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          onClick={handleLinkClick}
+                          className="block hover:bg-gray-100 p-2 text-lg"
+                        >
+                          Flutter Multi Platform App Development
                         </Link>
                       </li>
                     </ul>
                   </div>
-
                   {/* Column 2 - 2/4 width */}
                   <div className="w-2/4 px-4">
-                    <h3 className="font-bold mb-2">Column 2</h3>
+                    <h3 className="font-semibold text-lg underline mb-2">AI & Data Science</h3>
                     <ul className="space-y-2 -ml-2">
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 4
+                          Aplikasi AI untuk Industri Perbankan, Multifinance,
+                          Asuransi, dan Fintech
                         </Link>
                       </li>
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 5
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
-                        >
-                          Bootcamp 6
+                          Data Science dan Data Analist di Industri Perbenkan,
+                          Pembiayaan, dan Fintech AI untuk Perbankan,
+                          Multifinance, Asuransi, dan Fintech (Aplikasi Terapan
+                          Lanjutan)
                         </Link>
                       </li>
                     </ul>
@@ -187,37 +201,52 @@ const Navbar = () => {
 
                   {/* Column 3 - 1/4 width */}
                   <div className="w-1/4 pl-4">
-                    <h3 className="font-bold mb-2">Column 3</h3>
+                    <h3 className="font-semibold text-lg underline mb-2">Design</h3>
                     <ul className="space-y-2 -ml-2">
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 7
+                          3D Bootcamp
                         </Link>
                       </li>
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 8
+                          Photography Bootcamp
                         </Link>
                       </li>
                       <li>
                         <Link
                           href="#"
                           onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2"
+                          className="block hover:bg-gray-100 p-2 text-lg"
                         >
-                          Bootcamp 9
+                          Video Editing & Animation Bootcamp
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="#"
+                          onClick={handleLinkClick}
+                          className="block hover:bg-gray-100 p-2 text-lg"
+                        >
+                          Videografer & Sinematografer Bootcamp
                         </Link>
                       </li>
                     </ul>
                   </div>
+                </div>
+                {/* Button "Lihat Selengkapnya" */}
+                <div className=" mt-20">
+                  <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
+                    Lihat Selengkapnya
+                  </button>
                 </div>
               </div>
             </div>
@@ -371,7 +400,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href="#"
+              href="/bootcamp"
               onClick={handleLinkClick}
               className="py-2 text-lg hover:text-blue-500"
             >

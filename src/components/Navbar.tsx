@@ -113,9 +113,18 @@ const Navbar = () => {
               />
             </Link>
             {/* Dropdown value Bootcamp */}
-            <div className="absolute hidden -ml-[58vw] group-hover:block left-0 w-[106vw] h-[60vh] bg-white shadow-lg pt-4">
+            <div className="absolute hidden -ml-[58vw] group-hover:block left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
               <div className="container mx-auto px-4 py-10">
-                <hr className="border-t-4 border-[#C1FA31] my-4 w-full mx-auto rounded-full" />
+                <div className="flex items-center my-4 w-full mx-auto">
+                  <Image
+                    src="/assets/home/navbarLine.png"
+                    alt="Dropdown Icon"
+                    layout="responsive"
+                    width={100} 
+                    height={14} 
+                    className="w-full h-auto -ml-2"
+                  />
+                </div>
                 <div className="flex">
                   {/* Column 1 - 1/4 width */}
                   <div className="w-1/4 pr-4">
@@ -172,7 +181,9 @@ const Navbar = () => {
                   </div>
                   {/* Column 2 - 2/4 width */}
                   <div className="w-2/4 px-4">
-                    <h3 className="font-semibold text-lg underline mb-2">AI & Data Science</h3>
+                    <h3 className="font-semibold text-lg underline mb-2">
+                      AI & Data Science
+                    </h3>
                     <ul className="space-y-2 -ml-2">
                       <li>
                         <Link
@@ -201,7 +212,9 @@ const Navbar = () => {
 
                   {/* Column 3 - 1/4 width */}
                   <div className="w-1/4 pl-4">
-                    <h3 className="font-semibold text-lg underline mb-2">Design</h3>
+                    <h3 className="font-semibold text-lg underline mb-2">
+                      Design
+                    </h3>
                     <ul className="space-y-2 -ml-2">
                       <li>
                         <Link
@@ -243,7 +256,7 @@ const Navbar = () => {
                   </div>
                 </div>
                 {/* Button "Lihat Selengkapnya" */}
-                <div className=" mt-20">
+                <div className=" mt-10">
                   <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
                     Lihat Selengkapnya
                   </button>

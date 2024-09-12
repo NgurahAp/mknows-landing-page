@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
-type DropdownName = "bootcamp" | "newTraining" | "whatWeDo" | null;
+type DropdownName = "bootcamp" | "newTraining" | "whatWeDo" | "more" | null;
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -442,7 +442,6 @@ const Navbar = () => {
                             Executive Coaching & Bussines Mentoring
                           </Link>
                         </li>
-                        
                       </ul>
                     </div>
                   </div>
@@ -450,43 +449,99 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="relative group">
+          {/* More do desktop */}
+          <div
+            className="relative group"
+            onMouseEnter={() => handleDropdownEnter("more")}
+            onMouseLeave={handleDropdownLeave}
+          >
             <Link
               href="#"
               onClick={handleLinkClick}
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
               More
+              <Image
+                src="/assets/dropdown-icon.png"
+                alt="Dropdown Icon"
+                width={14}
+                height={14}
+                className="ml-2"
+              />
             </Link>
-            <ul className="absolute hidden group-hover:block bg-white text-center -ml-5 w-[9rem] shadow-lg py-2 rounded-lg">
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Option 1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Option 2
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Option 3
-                </Link>
-              </li>
-            </ul>
+            {/* Dropdown value New Training */}
+            {activeDropdown === "more" && (
+              <div className="absolute -ml-[91vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+                <div className="container mx-auto px-4 py-10">
+                  <div className="flex  ">
+                    {/* Column 1 - 1/4 width */}
+                    <div className="w-1/3 ">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg "
+                          >
+                            About Us
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            History
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Vision & Mission
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Column 2 - 2/4 width */}
+                    <div className="w-1/3 ">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Our Clients
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Our Facilitator
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Contact Us
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -7,6 +7,8 @@ import { useState, useEffect } from "react";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMediumScreen, setIsMediumScreen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  let timeoutId: NodeJS.Timeout; // Set explicit type for timeoutId
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -25,6 +27,17 @@ const Navbar = () => {
     if (isMediumScreen) {
       setIsMenuOpen(false);
     }
+  };
+
+  const handleDropdownEnter = () => {
+    clearTimeout(timeoutId);
+    setIsDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    timeoutId = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300); // Menambahkan delay 300ms sebelum dropdown menutup
   };
 
   return (
@@ -97,7 +110,11 @@ const Navbar = () => {
             Home
           </Link>
           {/* Bootcamp Navbar desktop */}
-          <div className="relative group">
+          <div
+            className="relative group"
+            onMouseEnter={handleDropdownEnter}
+            onMouseLeave={handleDropdownLeave}
+          >
             <Link
               href="/bootcamp"
               onClick={handleLinkClick}
@@ -113,15 +130,19 @@ const Navbar = () => {
               />
             </Link>
             {/* Dropdown value Bootcamp */}
-            <div className="absolute hidden -ml-[58vw] group-hover:block left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+            <div
+              className={`absolute ${
+                isDropdownOpen ? "block" : "hidden"
+              } -ml-[58vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4`}
+            >
               <div className="container mx-auto px-4 py-10">
                 <div className="flex items-center my-4 w-full mx-auto">
                   <Image
                     src="/assets/home/navbarLine.png"
                     alt="Dropdown Icon"
                     layout="responsive"
-                    width={100} 
-                    height={14} 
+                    width={100}
+                    height={14}
                     className="w-full h-auto -ml-2"
                   />
                 </div>

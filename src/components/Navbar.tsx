@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
+type DropdownName = "bootcamp" | "newTraining" | "whatWeDo" | null;
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMediumScreen, setIsMediumScreen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  let timeoutId: NodeJS.Timeout; // Set explicit type for timeoutId
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownName>(null);
+  const timeoutIdRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -29,15 +31,17 @@ const Navbar = () => {
     }
   };
 
-  const handleDropdownEnter = () => {
-    clearTimeout(timeoutId);
-    setIsDropdownOpen(true);
+  const handleDropdownEnter = (dropdownName: DropdownName) => {
+    if (timeoutIdRef.current) {
+      clearTimeout(timeoutIdRef.current);
+    }
+    setActiveDropdown(dropdownName);
   };
 
   const handleDropdownLeave = () => {
-    timeoutId = setTimeout(() => {
-      setIsDropdownOpen(false);
-    }, 300); // Menambahkan delay 300ms sebelum dropdown menutup
+    timeoutIdRef.current = setTimeout(() => {
+      setActiveDropdown(null);
+    }, 300);
   };
 
   return (
@@ -112,7 +116,7 @@ const Navbar = () => {
           {/* Bootcamp Navbar desktop */}
           <div
             className="relative group"
-            onMouseEnter={handleDropdownEnter}
+            onMouseEnter={() => handleDropdownEnter("bootcamp")}
             onMouseLeave={handleDropdownLeave}
           >
             <Link
@@ -130,162 +134,166 @@ const Navbar = () => {
               />
             </Link>
             {/* Dropdown value Bootcamp */}
-            <div
-              className={`absolute ${
-                isDropdownOpen ? "block" : "hidden"
-              } -ml-[58vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4`}
-            >
-              <div className="container mx-auto px-4 py-10">
-                <div className="flex items-center my-4 w-full mx-auto">
-                  <Image
-                    src="/assets/home/navbarLine.png"
-                    alt="Dropdown Icon"
-                    layout="responsive"
-                    width={100}
-                    height={14}
-                    className="w-full h-auto -ml-2"
-                  />
-                </div>
-                <div className="flex">
-                  {/* Column 1 - 1/4 width */}
-                  <div className="w-1/4 pr-4">
-                    <h3 className="font-semibold text-lg mb-2 underline">
-                      Information Technology
-                    </h3>
-                    <ul className="space-y-2 -ml-2">
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg "
-                        >
-                          UI/UX for Web & App Project
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Back End Developer Advance Level
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Front End Developer for Advance Level
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          IT QA Engineer
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Flutter Multi Platform App Development
-                        </Link>
-                      </li>
-                    </ul>
+            {activeDropdown === "bootcamp" && (
+              <div className="absolute -ml-[58vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-5 ">
+                <div className="container mx-auto px-4 py-10">
+                  <div className="flex items-center my-4 w-full mx-auto">
+                    <Image
+                      src="/assets/home/navbarLine.png"
+                      alt="Dropdown Icon"
+                      layout="responsive"
+                      width={100}
+                      height={14}
+                      className="w-full h-auto -ml-2"
+                    />
                   </div>
-                  {/* Column 2 - 2/4 width */}
-                  <div className="w-2/4 px-4">
-                    <h3 className="font-semibold text-lg underline mb-2">
-                      AI & Data Science
-                    </h3>
-                    <ul className="space-y-2 -ml-2">
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Aplikasi AI untuk Industri Perbankan, Multifinance,
-                          Asuransi, dan Fintech
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Data Science dan Data Analist di Industri Perbenkan,
-                          Pembiayaan, dan Fintech AI untuk Perbankan,
-                          Multifinance, Asuransi, dan Fintech (Aplikasi Terapan
-                          Lanjutan)
-                        </Link>
-                      </li>
-                    </ul>
+                  <div className="flex">
+                    {/* Column 1 - 1/4 width */}
+                    <div className="w-1/4 pr-4">
+                      <h3 className="font-semibold text-lg mb-2 underline">
+                        Information Technology
+                      </h3>
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg "
+                          >
+                            UI/UX for Web & App Project
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Back End Developer Advance Level
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Front End Developer for Advance Level
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            IT QA Engineer
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Flutter Multi Platform App Development
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Column 2 - 2/4 width */}
+                    <div className="w-2/4 px-4">
+                      <h3 className="font-semibold text-lg underline mb-2">
+                        AI & Data Science
+                      </h3>
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Aplikasi AI untuk Industri Perbankan, Multifinance,
+                            Asuransi, dan Fintech
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Data Science dan Data Analist di Industri Perbenkan,
+                            Pembiayaan, dan Fintech AI untuk Perbankan,
+                            Multifinance, Asuransi, dan Fintech (Aplikasi
+                            Terapan Lanjutan)
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Column 3 - 1/4 width */}
+                    <div className="w-1/4 pl-4">
+                      <h3 className="font-semibold text-lg underline mb-2">
+                        Design
+                      </h3>
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            3D Bootcamp
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Photography Bootcamp
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Video Editing & Animation Bootcamp
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Videografer & Sinematografer Bootcamp
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-
-                  {/* Column 3 - 1/4 width */}
-                  <div className="w-1/4 pl-4">
-                    <h3 className="font-semibold text-lg underline mb-2">
-                      Design
-                    </h3>
-                    <ul className="space-y-2 -ml-2">
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          3D Bootcamp
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Photography Bootcamp
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Video Editing & Animation Bootcamp
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="#"
-                          onClick={handleLinkClick}
-                          className="block hover:bg-gray-100 p-2 text-lg"
-                        >
-                          Videografer & Sinematografer Bootcamp
-                        </Link>
-                      </li>
-                    </ul>
+                  {/* Button "Lihat Selengkapnya" */}
+                  <div className=" mt-10">
+                    <Link href="/bootcamp">
+                      <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
+                        Lihat Selengkapnya
+                      </button>
+                    </Link>
                   </div>
-                </div>
-                {/* Button "Lihat Selengkapnya" */}
-                <div className=" mt-10">
-                  <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
-                    Lihat Selengkapnya
-                  </button>
                 </div>
               </div>
-            </div>
+            )}
           </div>
-          <div className="relative group">
+          {/* New Training Navbar desktop */}
+          <div
+            className="relative group"
+            onMouseEnter={() => handleDropdownEnter("newTraining")}
+            onMouseLeave={handleDropdownLeave}
+          >
             <Link
               href="#"
               onClick={handleLinkClick}
@@ -300,37 +308,45 @@ const Navbar = () => {
                 className="ml-2"
               />
             </Link>
-            <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Training 1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Training 2
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Training 3
-                </Link>
-              </li>
-            </ul>
+            {/* Dropdown value New Training */}
+            {activeDropdown === "newTraining" && (
+              <div className="absolute -ml-[71vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+                <div className="container mx-auto px-4 py-10">
+                  <div className="flex">
+                    {/* Column 1 - 1/4 width */}
+                    <div className="w-full pr-4">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg "
+                          >
+                            AI Sales Tools
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Virtual Reality
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <div className="relative group">
+          {/* What we do desktop */}
+          <div
+            className="relative group"
+            onMouseEnter={() => handleDropdownEnter("whatWeDo")}
+            onMouseLeave={handleDropdownLeave}
+          >
             <Link
               href="#"
               onClick={handleLinkClick}
@@ -345,35 +361,94 @@ const Navbar = () => {
                 className="ml-2"
               />
             </Link>
-            <ul className="absolute hidden group-hover:block bg-white text-center ml-1 w-[9rem] shadow-lg py-2 rounded-lg">
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Service 1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Service 2
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  onClick={handleLinkClick}
-                  className="block px-4 py-2 hover:bg-gray-100"
-                >
-                  Service 3
-                </Link>
-              </li>
-            </ul>
+            {/* Dropdown value New Training */}
+            {activeDropdown === "whatWeDo" && (
+              <div className="absolute -ml-[81vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+                <div className="container mx-auto px-4 py-10">
+                  <div className="flex justify-center ">
+                    {/* Column 1 - 1/4 width */}
+                    <div className="w-1/3 ">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg "
+                          >
+                            Public, In-House Training, Online Learning
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Consulting Service{" "}
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Asessment for Technical Competency
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Column 2 - 2/4 width */}
+                    <div className="w-1/3 ">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Learning Management System
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Consulting Service
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Outbound & Gathering
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    {/* Column 3 - 1/4 width */}
+                    <div className="w-1/3 ">
+                      <ul className="space-y-2 -ml-2">
+                        <li>
+                          <Link
+                            href="#"
+                            onClick={handleLinkClick}
+                            className="block hover:bg-gray-100 p-2 text-lg"
+                          >
+                            Executive Coaching & Bussines Mentoring
+                          </Link>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="relative group">
             <Link
@@ -382,13 +457,6 @@ const Navbar = () => {
               className="px-[20px] hover:text-blue-500 flex items-center"
             >
               More
-              <Image
-                src="/assets/dropdown-icon.png"
-                alt="Dropdown Icon"
-                width={14}
-                height={14}
-                className="ml-2"
-              />
             </Link>
             <ul className="absolute hidden group-hover:block bg-white text-center -ml-5 w-[9rem] shadow-lg py-2 rounded-lg">
               <li>

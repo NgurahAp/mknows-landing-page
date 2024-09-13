@@ -44,7 +44,7 @@ export default function BootcampCard({ bootcamp }: BootcampCardProps) {
           >
             Detail
             <Image
-              src="/assets/bootcamp/arrow.png"
+              src="/assets/bootcamp/Arrow.png"
               alt="Rectangle"
               width={14}
               height={14}
@@ -63,7 +63,7 @@ export default function BootcampCard({ bootcamp }: BootcampCardProps) {
       </div>
       <div className="absolute md:top-[10px] top-[10px] left-2">
         <Image
-          src="/assets/navbar-logo.png"
+          src="/assets/home/navbar-logo.png"
           alt="Rectangle"
           width={80}
           height={40}

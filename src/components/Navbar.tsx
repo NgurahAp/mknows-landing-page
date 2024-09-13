@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
-import { BootcampCategory, bootcampData } from './bootcampNavbarData'; 
+import { BootcampCategory, bootcampData } from "./bootcampNavbarData";
 
 type DropdownName = "bootcamp" | "newTraining" | "whatWeDo" | "more" | null;
 
@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="flex items-center pl-4 md:pl-[50px]">
         <div className="w-32 h-auto">
           <Image
-            src="/assets/navbar-logo.png"
+            src="/assets/home/navbar-logo.png"
             alt="Navbar Logo"
             width={79}
             height={24}
@@ -62,7 +62,7 @@ const Navbar = () => {
             <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px] rounded-[36px]">
               <div className="absolute inset-y-0 start-1 flex items-center ps-2 pointer-events-none">
                 <Image
-                  src="/assets/search-icon.png"
+                  src="/assets/home/search-icon.png"
                   alt="Search Icon"
                   width={24}
                   height={24}
@@ -127,7 +127,7 @@ const Navbar = () => {
             >
               Bootcamp Program
               <Image
-                src="/assets/dropdown-icon.png"
+                src="/assets/home/dropdown-icon.png"
                 alt="Dropdown Icon"
                 width={14}
                 height={14}
@@ -204,7 +204,7 @@ const Navbar = () => {
             >
               New Training
               <Image
-                src="/assets/dropdown-icon.png"
+                src="/assets/home/dropdown-icon.png"
                 alt="Dropdown Icon"
                 width={14}
                 height={14}
@@ -257,7 +257,7 @@ const Navbar = () => {
             >
               What We Do
               <Image
-                src="/assets/dropdown-icon.png"
+                src="/assets/home/dropdown-icon.png"
                 alt="Dropdown Icon"
                 width={14}
                 height={14}
@@ -365,7 +365,7 @@ const Navbar = () => {
             >
               More
               <Image
-                src="/assets/dropdown-icon.png"
+                src="/assets/home/dropdown-icon.png"
                 alt="Dropdown Icon"
                 width={14}
                 height={14}

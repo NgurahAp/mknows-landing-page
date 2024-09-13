@@ -46,7 +46,7 @@ const HeroSection = () => {
             <div className="relative bg-[#F5F5F5] md:h-[48px] md:w-[360px] w-[200px] h-[40px] rounded-[8px]">
               <div className="absolute md:pt-0 inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                 <Image
-                  src="/assets/search-icon.png"
+                  src="/assets/home/search-icon.png"
                   alt="Search Icon"
                   width={20}
                   height={20}

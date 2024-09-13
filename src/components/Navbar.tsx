@@ -147,133 +147,458 @@ const Navbar = () => {
                       className="w-full h-auto -ml-2"
                     />
                   </div>
-                  <div className="flex">
-                    {/* Column 1 - 1/4 width */}
-                    <div className="w-1/4 pr-4">
-                      <h3 className="font-semibold text-lg mb-2 underline">
-                        Information Technology
-                      </h3>
-                      <ul className="space-y-2 -ml-2">
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg "
-                          >
-                            UI/UX for Web & App Project
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Back End Developer Advance Level
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Front End Developer for Advance Level
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            IT QA Engineer
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Flutter Multi Platform App Development
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    {/* Column 2 - 2/4 width */}
-                    <div className="w-2/4 px-4">
-                      <h3 className="font-semibold text-lg underline mb-2">
-                        AI & Data Science
-                      </h3>
-                      <ul className="space-y-2 -ml-2">
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Aplikasi AI untuk Industri Perbankan, Multifinance,
-                            Asuransi, dan Fintech
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Data Science dan Data Analist di Industri Perbenkan,
-                            Pembiayaan, dan Fintech AI untuk Perbankan,
-                            Multifinance, Asuransi, dan Fintech (Aplikasi
-                            Terapan Lanjutan)
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    {/* Column 3 - 1/4 width */}
-                    <div className="w-1/4 pl-4">
-                      <h3 className="font-semibold text-lg underline mb-2">
-                        Design
-                      </h3>
-                      <ul className="space-y-2 -ml-2">
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            3D Bootcamp
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Photography Bootcamp
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Video Editing & Animation Bootcamp
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href="#"
-                            onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
-                          >
-                            Videografer & Sinematografer Bootcamp
-                          </Link>
-                        </li>
-                      </ul>
+                  <div className="w-full overflow-x-auto">
+                    <div className="flex  pb-4">
+                      {/* Column 1 */}
+                      <div className="flex-shrink-0 w-1/4">
+                        <h3 className="font-semibold text-lg mb-2 underline">
+                          Information Technology
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              UI/UX for Web & App Project
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Back End Developer Advance Level
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Front End Developer for Advance Level
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              IT QA Engineer
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Flutter Multi Platform App Development
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 2 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          AI & Data Science
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Aplikasi AI untuk Industri Perbankan,
+                              Multifinance, Asuransi, dan Fintech
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Data Science dan Data Analist di Industri
+                              Perbenkan, Pembiayaan, dan Fintech AI untuk
+                              Perbankan, Multifinance, Asuransi, dan Fintech
+                              (Aplikasi Terapan Lanjutan)
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 3 */}
+                      <div className="flex-shrink-0 w-1/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Design
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              3D Bootcamp
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Photography Bootcamp
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Video Editing & Animation Bootcamp
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Videografer & Sinematografer Bootcamp
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 4 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Blockchain
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Solidity Bootcamp : Pemrograman untuk Blockchain &
+                              Smart Contract
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Simplicity Bootcamp : Pemrograman untuk Blockchain
+                              & Smart Contract
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Python Bootcamp : Pemrograman untuk Blockchain &
+                              Smart Contract
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 5 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Cyber Security
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Cyber Security : Web Exploitation and Design
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Simplicity Bootcamp : Pemrograman untuk Blockchain
+                              & Smart Contract
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 6 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Leadership
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Digital Leadership & Team Management
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Analitics & Decison Making for Leader
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Managing Tim Kreatifity & Innovation for Leaders
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Strategic AI Skills : Generative AI, Diagnostic AI
+                              & Projective AI for Strategic Planning & Decision
+                              Making
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 7 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Soft Skill
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Management Emosi, Tempramen & Kontrol Diri
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Komunikasi Personal & Interpersonal di Era Digital
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Manajemen konflik, networking dan hubungan baik
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Negosiasi untuk bisnis dan kemasyarakatan
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 8 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          IOT
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Perencanaan IoT : Ide, Solusi, Perangkaian,
+                              Manajemen Proyek dan Komersialisasi
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Keamanan IOT : Manajemen Identitas dan Akses IoT,
+                              Keamanan Sistem, Data & Infrastruktur IoT
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Manajemen konflik, networking dan hubungan baik
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Negosiasi untuk bisnis dan kemasyarakatan
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 9 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          VR & Game
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Unreal Engine 5 Virtual Reality Development
+                              Bootcamp: Crafting Immersive Worlds with Expertise
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Bootcamp Game Development: Tingkatkan kemampuanmu
+                              menuju karir di Industri Game{" "}
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Manajemen konflik, networking dan hubungan baik
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Negosiasi untuk bisnis dan kemasyarakatan
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Column 10 */}
+                      <div className="flex-shrink-0 w-2/4">
+                        <h3 className="font-semibold text-lg underline mb-2">
+                          Bisnis
+                        </h3>
+                        <ul className="space-y-2">
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Strategi Sponsorship & Penjualan Era Digital
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Digital Marketing dan Event Management
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Financial Planning, Business Modeling, Scenario
+                              Testing & Analytics Dashboard
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Desain Pembelajaran & Instruksional, Pembuatan
+                              Materi Ajar, serta Metode Assesment untuk
+                              Pendidikan, Pelatihan, dan Pengembangan
+                              Karyawan(Digital & Non Digital)
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Digital Selling
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Project Management: Kunci Sukses dalam Mengerjakan
+                              Proyek Secara Efektif dan Efisien
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              Pengelola kantor, pabrik, gudang, dan kafetaria
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   {/* Button "Lihat Selengkapnya" */}
@@ -320,7 +645,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg "
+                            className="block hover:bg-gray-100 py-2 text-lg "
                           >
                             AI Sales Tools
                           </Link>
@@ -329,7 +654,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Virtual Reality
                           </Link>
@@ -373,7 +698,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg "
+                            className="block hover:bg-gray-100 py-2 text-lg "
                           >
                             Public, In-House Training, Online Learning
                           </Link>
@@ -382,7 +707,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Consulting Service{" "}
                           </Link>
@@ -391,7 +716,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Asessment for Technical Competency
                           </Link>
@@ -405,7 +730,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Learning Management System
                           </Link>
@@ -414,7 +739,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Consulting Service
                           </Link>
@@ -423,7 +748,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Outbound & Gathering
                           </Link>
@@ -437,7 +762,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Executive Coaching & Bussines Mentoring
                           </Link>
@@ -481,7 +806,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg "
+                            className="block hover:bg-gray-100 py-2 text-lg "
                           >
                             About Us
                           </Link>
@@ -490,7 +815,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             History
                           </Link>
@@ -499,7 +824,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Vision & Mission
                           </Link>
@@ -513,7 +838,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Our Clients
                           </Link>
@@ -522,7 +847,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Our Facilitator
                           </Link>
@@ -531,7 +856,7 @@ const Navbar = () => {
                           <Link
                             href="#"
                             onClick={handleLinkClick}
-                            className="block hover:bg-gray-100 p-2 text-lg"
+                            className="block hover:bg-gray-100 py-2 text-lg"
                           >
                             Contact Us
                           </Link>

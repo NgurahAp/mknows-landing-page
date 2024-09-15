@@ -68,11 +68,11 @@ const Navbar = () => {
                   height={24}
                 />
               </div>
-              <div className="flex items">
+              <div className="flex items-center h-full">
                 <input
                   type="search"
                   id="default-search"
-                  className="block w-full pl-14 text-xl pt-[1rem] text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none"
+                  className="block w-full pl-14 text-xl text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-full"
                   placeholder="Search"
                 />
               </div>

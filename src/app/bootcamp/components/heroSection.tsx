@@ -1,7 +1,7 @@
 export default function BootcampHeroSection() {
   return (
     <section
-      className="min-h-[60vh] md:mt-[6rem] mt-32 bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
+      className="md:min-h-[60vh] min-h-[30vh] md:mt-[4rem] mt-[4rem] bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
       style={{
         backgroundImage: "url('/assets/bootcamp/hero-image-bootcamp.png')",
       }}

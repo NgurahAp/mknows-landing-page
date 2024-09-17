@@ -84,7 +84,7 @@ const Navbar = () => {
       {isMediumScreen ? (
         <div className="pr-4 flex items-center">
           <form className="pr-10 justify-center h-14 flex items-center">
-            <div className="relative bg-[#F5F5F5] overflow-x-hidden md:w-[190px] rounded-[36px]">
+            <div className="relative bg-[#F5F5F5] overflow-x-hidden w-40 rounded-full">
               <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                 <Image
                   src="/assets/search-icon.png"
@@ -450,7 +450,7 @@ const Navbar = () => {
       )}
 
       {isMediumScreen && isMenuOpen && (
-        <div className="fixed top-[75px] left-0 w-full bg-white shadow-md">
+        <div className="fixed top-24 left-0 w-full bg-white shadow-md">
           <div className="flex flex-col items-center py-4">
             <Link
               href="/"

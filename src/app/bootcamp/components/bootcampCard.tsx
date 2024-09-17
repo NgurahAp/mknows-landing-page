@@ -16,7 +16,7 @@ interface BootcampCardProps {
 export default function BootcampCard({ bootcamp }: BootcampCardProps) {
   return (
     <div
-      className="max-w-sm w-full md:mx-8 mx-0 my-7 min-h-[465px] border md:my-10 relative flex flex-col rounded-sm"
+      className="max-w-sm w-full md:mx-8 mx-0 my-7 min-h-[35rem] border md:my-10 relative flex flex-col rounded-sm"
       style={{ backgroundColor: bootcamp.bg }}
     >
       <Image
@@ -61,7 +61,7 @@ export default function BootcampCard({ bootcamp }: BootcampCardProps) {
           height={200}
         />
       </div>
-      <div className="absolute md:top-[10px] top-[10px] left-2">
+      <div className="absolute  top-4 left-2">
         <Image
           src="/assets/home/navbar-logo.png"
           alt="Rectangle"

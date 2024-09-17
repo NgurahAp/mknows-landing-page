@@ -17,14 +17,14 @@ const CategorySection = () => {
         </h2>
         <div className="flex flex-wrap justify-center -mx-10">
           {data?.map((category: { id: string; path: string; name: string }) => (
-            <div key={category.id} className="w-[298px] m-10">
-              <div className="relative h-[192px] rounded-[15px] overflow-hidden">
+            <div key={category.id} className="md:w-96 w-72 m-10">
+              <div className="relative md:h-60 h-48 rounded-3xl overflow-hidden">
                 <Image
                   src={category.path}
                   alt={category.name}
                   fill
                   style={{ objectFit: "cover" }}
-                  className="rounded-[15px]"
+                  className="rounded-3xl"
                 />
                 <div className="mt-28 absolute inset-0 bg-gradient-to-t from-[#141414] to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-4">

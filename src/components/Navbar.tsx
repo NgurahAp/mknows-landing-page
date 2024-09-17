@@ -46,20 +46,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md py-4 h-[75px] max-w-screen justify-between flex items-center fixed top-0 left-0 w-full z-50">
-      <div className="flex items-center pl-4 md:pl-[50px]">
+    <nav className="bg-white shadow-md py-4 h-24 max-w-screen justify-between flex items-center fixed top-0 left-0 w-full z-50">
+      <div className="flex items-center pl-4 md:pl-16">
         <div className="w-32 h-auto">
           <Image
             src="/assets/home/navbar-logo.png"
             alt="Navbar Logo"
             width={79}
             height={24}
-            className="md:w-[106px] md:h-[32px] object-contain"
+            className="md:w-36 md:h-auto object-contain"
           />
         </div>
         {!isMediumScreen && (
-          <form className="mx-auto pl-[60px] flex justify-center h-[43px]">
-            <div className="relative bg-[#F5F5F5] overflow-hidden w-[310px] rounded-[36px]">
+          <form className="mx-auto pl-20 flex justify-center h-14">
+            <div className="relative bg-[#F5F5F5] overflow-hidden w-80 rounded-full">
               <div className="absolute inset-y-0 start-1 flex items-center ps-2 pointer-events-none">
                 <Image
                   src="/assets/home/search-icon.png"
@@ -83,7 +83,7 @@ const Navbar = () => {
 
       {isMediumScreen ? (
         <div className="pr-4 flex items-center">
-          <form className="pr-10 justify-center h-[36px] flex items-center">
+          <form className="pr-10 justify-center h-14 flex items-center">
             <div className="relative bg-[#F5F5F5] overflow-x-hidden md:w-[190px] rounded-[36px]">
               <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
                 <Image
@@ -106,11 +106,11 @@ const Navbar = () => {
           </button>
         </div>
       ) : (
-        <div className="flex pr-[50px]">
+        <div className="flex pr-12">
           <Link
             href="/"
             onClick={handleLinkClick}
-            className="pr-[20px] hover:text-blue-500"
+            className="pr-12 text-lg hover:text-blue-500"
           >
             Home
           </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
             <Link
               href="/bootcamp"
               onClick={handleLinkClick}
-              className="px-[20px] hover:text-blue-500 flex items-center"
+              className="px-10 text-lg hover:text-blue-500 flex items-center"
             >
               Bootcamp Program
               <Image
@@ -136,7 +136,7 @@ const Navbar = () => {
             </Link>
             {/* Dropdown value Bootcamp */}
             {activeDropdown === "bootcamp" && (
-              <div className="absolute -ml-[58vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-5">
+              <div className="absolute -ml-[60rem] left-0 w-[106vw] h-auto bg-white shadow-lg mt-5">
                 <div className="container mx-auto px-4 py-10">
                   <div className="flex items-center my-4 w-full mx-auto">
                     <Image
@@ -200,7 +200,7 @@ const Navbar = () => {
             <Link
               href="#"
               onClick={handleLinkClick}
-              className="px-[20px] hover:text-blue-500 flex items-center"
+              className="px-10 text-lg hover:text-blue-500 flex items-center"
             >
               New Training
               <Image
@@ -213,7 +213,7 @@ const Navbar = () => {
             </Link>
             {/* Dropdown value New Training */}
             {activeDropdown === "newTraining" && (
-              <div className="absolute -ml-[71vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+              <div className="absolute -ml-[73rem] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
                 <div className="container mx-auto px-4 py-10">
                   <div className="flex">
                     {/* Column 1 - 1/4 width */}
@@ -253,7 +253,7 @@ const Navbar = () => {
             <Link
               href="#"
               onClick={handleLinkClick}
-              className="px-[20px] hover:text-blue-500 flex items-center"
+              className="px-10 text-lg hover:text-blue-500 flex items-center"
             >
               What We Do
               <Image
@@ -266,7 +266,7 @@ const Navbar = () => {
             </Link>
             {/* Dropdown value New Training */}
             {activeDropdown === "whatWeDo" && (
-              <div className="absolute -ml-[81vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+              <div className="absolute -ml-[88rem] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
                 <div className="container mx-auto px-4 py-10">
                   <div className="flex justify-center ">
                     {/* Column 1 - 1/4 width */}
@@ -361,7 +361,7 @@ const Navbar = () => {
             <Link
               href="#"
               onClick={handleLinkClick}
-              className="px-[20px] hover:text-blue-500 flex items-center"
+              className="px-10 text-lg hover:text-blue-500 flex items-center"
             >
               More
               <Image
@@ -374,7 +374,7 @@ const Navbar = () => {
             </Link>
             {/* Dropdown value New Training */}
             {activeDropdown === "more" && (
-              <div className="absolute -ml-[91vw] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
+              <div className="absolute -ml-[101rem] left-0 w-[106vw] h-auto bg-white shadow-lg mt-8 pt-4">
                 <div className="container mx-auto px-4 py-10">
                   <div className="flex  ">
                     {/* Column 1 - 1/4 width */}

@@ -1,9 +1,19 @@
 import Image from "next/image";
 
 export default function Training() {
-  const images = Array.from(
-    { length: 10 },
-    (_, i) => `/assets/whatWeDo/inHouseRow1-1.png`
+  const imagesRow1 = Array.from(
+    { length: 9 },
+    (_, i) => `/assets/whatWeDo/clients/row1-${i + 1}.png`
+  );
+
+  const imagesRow2 = Array.from(
+    { length: 8 },
+    (_, i) => `/assets/whatWeDo/clients/row2-${i + 1}.png`
+  );
+
+  const imagesRow3 = Array.from(
+    { length: 5 },
+    (_, i) => `/assets/whatWeDo/clients/row3-${i + 1}.png`
   );
 
   return (
@@ -128,7 +138,7 @@ export default function Training() {
             Our Clients
           </h2>
           <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
-            {images.map((src, index) => (
+            {imagesRow1.map((src, index) => (
               <div key={index} className="flex-shrink-0 h-full">
                 <Image
                   src={src}
@@ -142,10 +152,10 @@ export default function Training() {
             ))}
           </div>
           <div className="w-full h-28 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
-            {images.map((src, index) => (
+            {imagesRow2.map((src, index) => (
               <div key={index} className="flex-shrink-0 h-full">
                 <Image
-                  src="/assets/whatWeDo/inHouseRow2-1.png"
+                  src={src}
                   alt={`In-house activity ${index + 1}`}
                   width={0}
                   height={0}
@@ -156,10 +166,10 @@ export default function Training() {
             ))}
           </div>
           <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5  scrollbar-hide">
-            {images.map((src, index) => (
+            {imagesRow3.map((src, index) => (
               <div key={index} className="flex-shrink-0 h-full">
                 <Image
-                  src="/assets/whatWeDo/inHouseRow3-1.png"
+                  src={src}
                   alt={`In-house activity ${index + 1}`}
                   width={0}
                   height={0}

@@ -1,14 +1,14 @@
 export default function BootcampHeroSection() {
   return (
     <section
-      className="md:min-h-[60vh] min-h-[30vh] md:mt-[4rem] mt-[4rem] bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
+      className="md:min-h-[60vh] min-h-[30vh] mt-16  bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
       style={{
         backgroundImage: "url('/assets/bootcamp/hero-image-bootcamp.png')",
       }}
     >
       <div className="w-full">
         <div className="md:pl-20 pl-5 flex flex-col justify-center">
-          <h1 className="font-bold text-xl md:text-[35px] md:leading-[48px] text-left">
+          <h1 className="font-bold text-xl md:text-5xl md:mb-2 mb-0  text-left">
             Bootcamp Program
           </h1>
           <h2 className="font-semibold text-sm md:text-4xl text-left">

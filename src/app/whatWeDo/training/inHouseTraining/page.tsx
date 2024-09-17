@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export default function Training() {
   const imagesRow1 = Array.from(
@@ -137,48 +138,54 @@ export default function Training() {
           <h2 className="text-4xl text-[#225677] font-semibold text-center mb-8 py-9 pt-20">
             Our Clients
           </h2>
-          <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
-            {imagesRow1.map((src, index) => (
-              <div key={index} className="flex-shrink-0 h-full">
-                <Image
-                  src={src}
-                  alt={`In-house activity ${index + 1}`}
-                  width={0}
-                  height={0}
-                  sizes="100%"
-                  className="h-full w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="w-full h-28 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
-            {imagesRow2.map((src, index) => (
-              <div key={index} className="flex-shrink-0 h-full">
-                <Image
-                  src={src}
-                  alt={`In-house activity ${index + 1}`}
-                  width={0}
-                  height={0}
-                  sizes="100%"
-                  className="h-full w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
-          <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5  scrollbar-hide">
-            {imagesRow3.map((src, index) => (
-              <div key={index} className="flex-shrink-0 h-full">
-                <Image
-                  src={src}
-                  alt={`In-house activity ${index + 1}`}
-                  width={0}
-                  height={0}
-                  sizes="100%"
-                  className="h-full w-auto object-contain"
-                />
-              </div>
-            ))}
-          </div>
+          <Marquee>
+            <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
+              {imagesRow1.map((src, index) => (
+                <div key={index} className="flex-shrink-0 h-full">
+                  <Image
+                    src={src}
+                    alt={`In-house activity ${index + 1}`}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </Marquee>
+          <Marquee direction="right">
+            <div className="w-full h-28 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
+              {imagesRow2.map((src, index) => (
+                <div key={index} className="flex-shrink-0 h-full">
+                  <Image
+                    src={src}
+                    alt={`In-house activity ${index + 1}`}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </Marquee>
+          <Marquee>
+            <div className="w-full h-24 overflow-x-auto flex space-x-12 p-3 my-5  scrollbar-hide">
+              {imagesRow3.map((src, index) => (
+                <div key={index} className="flex-shrink-0 h-full">
+                  <Image
+                    src={src}
+                    alt={`In-house activity ${index + 1}`}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    className="h-full w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
+          </Marquee>
         </div>
       </section>
     </main>

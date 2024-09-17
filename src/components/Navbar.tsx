@@ -274,7 +274,7 @@ const Navbar = () => {
                       <ul className="space-y-2 -ml-2">
                         <li>
                           <Link
-                            href="#"
+                            href="/whatWeDo/training"
                             onClick={handleLinkClick}
                             className="block hover:bg-gray-100 py-2 text-lg "
                           >

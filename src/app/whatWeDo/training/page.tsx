@@ -5,7 +5,7 @@ const trainingCategories = [
   {
     title: "Online Learning",
     imageSrc: "/assets/whatWeDo/onlineLearning.png",
-    link: "/online-learning",
+    link: "/whatWeDo/training/onlineTraining",
   },
   {
     title: "Public Learning",

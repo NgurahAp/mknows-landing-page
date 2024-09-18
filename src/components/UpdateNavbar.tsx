@@ -234,11 +234,11 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/whatWeDo/hybridOfficerDevelopment"
                       onClick={() => handleClick("whatWeDo")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
-                      Consulting Service{" "}
+                      Hybrid Officer Development Crash Program
                     </Link>
                   </li>
                   <li>
@@ -302,6 +302,7 @@ const UpdateNavbar: React.FC = () => {
           </div>
         </section>
       )}
+
       {activeSection === "more" && (
         <section className="bg-white w-full h-auto flex items-center justify-center fixed top-24 left-0 z-50">
           <div className="container mx-auto px-4 py-10">

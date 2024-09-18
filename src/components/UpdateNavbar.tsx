@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const UpdateNavbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -13,72 +15,144 @@ const UpdateNavbar: React.FC = () => {
   return (
     <div>
       {/* Navbar */}
-      <nav className="bg-gray-800 p-4 fixed top-0 left-0 w-full z-50">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="text-white text-xl font-bold">MyLogo</div>
-          <ul className="flex space-x-4">
+      <nav className="bg-white shadow-md  py-4 h-24 max-w-screen flex items-center fixed top-0 left-0 w-full z-50">
+        <div className="container mx-auto px-10 flex items-center justify-between">
+          <div className="flex items-center ">
+            <div className="w-32 h-auto">
+              <Image
+                src="/assets/home/navbar-logo.png"
+                alt="Navbar Logo"
+                width={79}
+                height={24}
+                className="md:w-36 md:h-auto object-contain"
+              />
+            </div>
+            <form className="mx-auto  flex justify-center h-14 pl-20">
+              <div className="relative bg-[#F5F5F5] overflow-hidden w-96 rounded-full">
+                <div className="absolute inset-y-0 start-1 flex items-center ps-2 pointer-events-none">
+                  <Image
+                    src="/assets/home/search-icon.png"
+                    alt="Search Icon"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex items-center h-full">
+                  <input
+                    type="search"
+                    id="default-search"
+                    className="block w-full pl-14 text-xl text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-full"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <ul className="flex space-x-14">
             <li>
-              <button
-                onClick={() => handleClick("home")}
-                className="text-white hover:text-gray-400"
+              <Link
+                href="/"
+                className="text-black flex text-lg hover:text-gray-400"
               >
                 Home
-              </button>
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleClick("about")}
-                className="text-white hover:text-gray-400"
+              <Link
+                href=""
+                onClick={() => handleClick("bootcampProgram")}
+                className="text-black flex items-center text-lg hover:text-gray-400"
               >
-                About
-              </button>
+                Bootcamp Program
+                <Image
+                  src="/assets/home/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={2}
+                  className="ml-2 h-5"
+                />
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleClick("services")}
-                className="text-white hover:text-gray-400"
+              <Link
+                href=""
+                onClick={() => handleClick("newTraining")}
+                className="text-black flex items-center text-lg hover:text-gray-400"
               >
-                Services
-              </button>
+                New Training
+                <Image
+                  src="/assets/home/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={2}
+                  className="ml-2 h-5"
+                />
+              </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleClick("contact")}
-                className="text-white hover:text-gray-400"
+              <Link
+                href=""
+                onClick={() => handleClick("whatWeDo")}
+                className="text-black flex items-center text-lg hover:text-gray-400"
               >
-                Contact
-              </button>
+                What We Do
+                <Image
+                  src="/assets/home/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={2}
+                  className="ml-2 h-5"
+                />
+              </Link>
+            </li>{" "}
+            <li>
+              <Link
+                href=""
+                onClick={() => handleClick("more")}
+                className="text-black flex items-center text-lg hover:text-gray-400"
+              >
+                More
+                <Image
+                  src="/assets/home/dropdown-icon.png"
+                  alt="Dropdown Icon"
+                  width={14}
+                  height={2}
+                  className="ml-2 h-5"
+                />
+              </Link>
             </li>
           </ul>
         </div>
       </nav>
 
       {/* Section yang ditampilkan setelah klik navbar */}
-      {activeSection === "home" && (
-        <section className="bg-blue-100 w-full h-[50vh] flex items-center justify-center fixed top-16 left-0 z-50">
-          <h2 className="text-3xl font-bold">Welcome to the Home Section</h2>
+      {activeSection === "bootcampProgram" && (
+        <section className="bg-green-100 w-full h-[50vh] flex items-center justify-center fixed top-24 left-0 z-50">
+          <h2 className="text-3xl font-bold">bootcamp Us Section</h2>
+          <p className="mt-4">Here is more information bootcamp us.</p>
         </section>
       )}
 
-      {activeSection === "about" && (
-        <section className="bg-green-100 w-full h-[50vh] flex items-center justify-center fixed top-16 left-0 z-50">
-          <h2 className="text-3xl font-bold">About Us Section</h2>
-          <p className="mt-4">Here is more information about us.</p>
-        </section>
-      )}
-
-      {activeSection === "services" && (
-        <section className="bg-yellow-100 w-full h-[50vh] flex items-center justify-center fixed top-16 left-0 z-50">
-          <h2 className="text-3xl font-bold">Our Services Section</h2>
+      {activeSection === "newTraining" && (
+        <section className="bg-yellow-100 w-full h-[50vh] flex items-center justify-center fixed top-24 left-0 z-50">
+          <h2 className="text-3xl font-bold">New Training Section</h2>
           <p className="mt-4">
             We offer a variety of services to meet your needs.
           </p>
         </section>
       )}
 
-      {activeSection === "contact" && (
-        <section className="bg-red-100 w-full h-[50vh] flex items-center justify-center fixed top-16 left-0 z-50">
-          <h2 className="text-3xl font-bold">Contact Us Section</h2>
+      {activeSection === "whatWeDo" && (
+        <section className="bg-red-100 w-full h-[50vh] flex items-center justify-center fixed top-24 left-0 z-50">
+          <h2 className="text-3xl font-bold">whatWeDo Us Section</h2>
+          <p className="mt-4">
+            Get in touch with us through the following ways.
+          </p>
+        </section>
+      )}
+      {activeSection === "more" && (
+        <section className="bg-red-100 w-full h-[50vh] flex items-center justify-center fixed top-24 left-0 z-50">
+          <h2 className="text-3xl font-bold">More Us Section</h2>
           <p className="mt-4">
             Get in touch with us through the following ways.
           </p>

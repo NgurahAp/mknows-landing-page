@@ -27,7 +27,7 @@ export default function Training() {
           <div className="flex flex-col md:flex-row items-center py-5">
             <div className="md:w-1/2 mb-6 md:mb-0 flex justify-center">
               <Image
-                src="/assets/whatWeDo/inHouse1.png"
+                src="/assets/whatWeDo/training/inHouse1.png"
                 alt="Deskripsi gambar"
                 width={366}
                 height={375}
@@ -63,7 +63,7 @@ export default function Training() {
             </div>
             <div className="md:w-1/2 mb-6 md:mb-0 flex items-center justify-center">
               <Image
-                src="/assets/whatWeDo/inHouse2.png"
+                src="/assets/whatWeDo/training/inHouse2.png"
                 alt="Deskripsi gambar"
                 width={366}
                 height={375}
@@ -74,7 +74,7 @@ export default function Training() {
           <div className="flex flex-col md:flex-row items-center py-5">
             <div className="md:w-1/2 mb-6 md:mb-0 flex items-center justify-center">
               <Image
-                src="/assets/whatWeDo/inHouse3.png"
+                src="/assets/whatWeDo/training/inHouse3.png"
                 alt="Deskripsi gambar"
                 width={366}
                 height={375}

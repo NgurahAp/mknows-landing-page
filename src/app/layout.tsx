@@ -4,6 +4,7 @@ import "./globals.css";
 import Providers from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "../components/Footer";
+import UpdateNavbar from "@/components/UpdateNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -32,7 +33,8 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        <Navbar />
+        {/* <Navbar /> */}
+        <UpdateNavbar/>
         <Providers>{children}</Providers>
         <Footer />
       </body>

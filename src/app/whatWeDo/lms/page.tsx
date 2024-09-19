@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { levelCards, animationCards } from "./cardData";
 import CardGrid from "./components/cardGrid";
 
@@ -48,7 +47,7 @@ export default function LMS() {
           pembelajaran. Kami dapat memberi Anda grafis dalam bentuk 2D, 3D,
           still atau bergerak tergantung pada kebutuhan instruksional Anda.
         </p>
-        <CardGrid cards={levelCards} gridCols={3} />
+        <CardGrid cards={levelCards} />
         <p className="text-4xl flex items-start justify-start text-left text-[#22776C] font-medium mb-5">
           Vidio Instriksional
         </p>
@@ -61,7 +60,7 @@ export default function LMS() {
           yang menarik dan interaktif. Dengan pilihan ini, Anda dapat memilih
           format yang paling sesuai untuk mencapai tujuan pembelajaran Anda.
         </p>
-        <CardGrid cards={animationCards} gridCols={4} />
+        <CardGrid cards={animationCards} />
       </section>
       <section
         className="md:min-h-[80vh] min-h-[30vh] mt-16 bg-cover bg-no-repeat bg-center max-w-screen flex items-center"

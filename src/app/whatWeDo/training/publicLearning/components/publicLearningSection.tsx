@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface OnlineLearningSectionProps {
+interface PublicLearningSectionProps {
   training: {
     id: number;
     title: string;
@@ -10,7 +10,7 @@ interface OnlineLearningSectionProps {
   };
 }
 
-export default function OnlineLearningSection({ training }: OnlineLearningSectionProps) {
+export default function PublicLearningSection({ training }: PublicLearningSectionProps) {
   return (
     <section className="pt-7 w-96">
       <div className="container mx-auto mt-10">

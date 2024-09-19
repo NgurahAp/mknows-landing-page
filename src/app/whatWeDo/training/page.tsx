@@ -10,7 +10,7 @@ const trainingCategories = [
   {
     title: "Public Learning",
     imageSrc: "/assets/whatWeDo/training/publicLearning.png",
-    link: "/public-learning",
+    link: "/whatWeDo/training/publicLearning",
   },
   {
     title: "In-House Training",

@@ -1,5 +1,5 @@
-import { onlineLearningData } from "./components/onlineTrainingData";
-import OnlineLearningSection from "./components/onlineLearningSection";
+import { publicLearningData } from "./components/publicLearningData";
+import PublicLearningSection from "./components/publicLearningSection";
 import Link from "next/link";
 
 export default function NewTrainingPage() {
@@ -21,8 +21,8 @@ export default function NewTrainingPage() {
         </Link>
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center gap-10">
-            {onlineLearningData?.map((training) => (
-              <OnlineLearningSection key={training?.id} training={training} />
+            {publicLearningData?.map((training) => (
+              <PublicLearningSection key={training?.id} training={training} />
             ))}
           </div>
         </div>

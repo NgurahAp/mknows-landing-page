@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { levelCards, animationCards } from "./cardData";
+import CardGrid from "./components/cardGrid";
 
 export default function LMS() {
   return (
@@ -47,33 +48,7 @@ export default function LMS() {
           pembelajaran. Kami dapat memberi Anda grafis dalam bentuk 2D, 3D,
           still atau bergerak tergantung pada kebutuhan instruksional Anda.
         </p>
-        <div className="flex justify-center items-center py-20 ">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
-            {levelCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg w-80 rounded-2xl p-6 text-center"
-              >
-                <div className="flex justify-center mb-6">
-                  {/* Image sebagai ikon */}
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={40} // Atur lebar ikon
-                    height={40} // Atur tinggi ikon
-                    className="mx-auto"
-                  />
-                </div>
-                <h2 className="text-xl font-semibold text-[#648B04]   text-left mb-2">
-                  {card.title}
-                </h2>
-                <p className="text-gray-600 text-xl text-left">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <CardGrid cards={levelCards} gridCols={3} />
         <p className="text-4xl flex items-start justify-start text-left text-[#22776C] font-medium mb-5">
           Vidio Instriksional
         </p>
@@ -86,33 +61,7 @@ export default function LMS() {
           yang menarik dan interaktif. Dengan pilihan ini, Anda dapat memilih
           format yang paling sesuai untuk mencapai tujuan pembelajaran Anda.
         </p>
-        <div className="flex justify-center items-center py-20 ">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
-            {animationCards.map((card, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-lg w-80 rounded-2xl p-6 text-center"
-              >
-                <div className="flex justify-center mb-6">
-                  {/* Image sebagai ikon */}
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={40} // Atur lebar ikon
-                    height={40} // Atur tinggi ikon
-                    className="mx-auto"
-                  />
-                </div>
-                <h2 className="text-xl font-semibold text-[#648B04]   text-left mb-2">
-                  {card.title}
-                </h2>
-                <p className="text-gray-600 text-xl text-left">
-                  {card.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        <CardGrid cards={animationCards} gridCols={4} />
       </section>
       <section
         className="md:min-h-[80vh] min-h-[30vh] mt-16 bg-cover bg-no-repeat bg-center max-w-screen flex items-center"

@@ -9,32 +9,32 @@ interface Training {
     { 
       id: 1,
       title: "Webtraining Sales & Marketing Series",
-      image: "/assets/bootcamp/frontend.png",
-      link: "/bootcamp/frontend-developer",
+      image: "/assets/whatWeDo/training/onlineLearning/onlineLearning1.png",
+      link: "/training/onlineLearning/webtraining-sales",
     },
     {
       id: 2,
       title: "Webtraining Credit & Collection Series",
-      image: "/assets/bootcamp/backend.png",
-      link: "/bootcamp/backend.png",
+      image: "/assets/whatWeDo/training/onlineLearning/onlineLearning2.png",
+      link: "/training/onlineLearning/webtraining-credit",
     },
     {
       id: 3,
       title: "Webtraining Credit & Collection Series",
-      image: "/assets/bootcamp/flutter.png",
-      link: "/bootcamp/frontend-developer",
+      image: "/assets/whatWeDo/training/onlineLearning/onlineLearning3.png",
+      link: "/training/onlineLearning/webtraining-credit2",
     },
     {
       id: 4,
       title: "Webtraining Office & Administration Series",
-      image: "/assets/bootcamp/dataScience.png",
-      link: "/bootcamp/ui-ux-design",
+      image: "/assets/whatWeDo/training/onlineLearning/onlineLearning4.png",
+      link: "/training/onlineLearning/webtraining-office",
     },
     {
       id: 5,
       title: "Webtraining Other Series",
-      image: "/assets/bootcamp/vidiografer.png",
-      link: "/bootcamp/ui-ux-design",
+      image: "/assets/whatWeDo/training/onlineLearning/onlineLearning5.png",
+      link: "/training/onlineLearning/webtraining-other",
     },
   ];
   

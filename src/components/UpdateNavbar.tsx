@@ -266,7 +266,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/whatWeDo/consultingService"
                       onClick={() => handleClick("whatWeDo")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >

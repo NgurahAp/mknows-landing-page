@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="h-[65vh] px-16 md:pt-32 pt-14 relative">
       <Image
-        src="/assets/navbar-logo.png"
+        src="/assets/home/navbar-logo.png"
         alt="M-Knows Logo"
         width={126}
         height={32}
@@ -55,28 +55,28 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col items-center ">
         <div className="flex pt-5">
           <Image
-            src="/assets/linkedin-icon.png"
+            src="/assets/home/linkedin-icon.png"
             alt="Linked In"
             width={50}
             height={50}
             className="rounded-2xl mr-6"
           />
           <Image
-            src="/assets/fb-icon.png"
+            src="/assets/home/fb-icon.png"
             alt="Facebook"
             width={50}
             height={50}
             className="rounded-2xl mr-6"
           />
           <Image
-            src="/assets/ig-icon.png"
+            src="/assets/home/ig-icon.png"
             alt="Instagram"
             width={50}
             height={50}
             className="rounded-2xl mr-6"
           />
           <Image
-            src="/assets/yt-icon.png"
+            src="/assets/home/yt-icon.png"
             alt="You-tube"
             width={50}
             height={50}

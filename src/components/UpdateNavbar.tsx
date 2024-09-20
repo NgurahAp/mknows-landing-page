@@ -312,7 +312,7 @@ const UpdateNavbar: React.FC = () => {
                 <ul className="space-y-2 -ml-2">
                   <li>
                     <Link
-                      href="#"
+                      href="/more/aboutUs"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg "
                     >

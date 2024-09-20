@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import OurClients from "@/components/OurClients";
 
-export default function ATC() {
+export default function consultingService() {
   return (
     <main>
       <section
@@ -34,7 +34,7 @@ export default function ATC() {
           <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
             <div className="w-1/3 mb-6 md:mb-0 flex justify-center">
               <Image
-                src="/assets/whatWeDo/ATC/solusi-integratif.png"
+                src="/assets/whatWeDo/consultingService/15th.png"
                 alt="Deskripsi gambar"
                 width={317}
                 height={300}
@@ -42,32 +42,28 @@ export default function ATC() {
               />
             </div>
             <div className="w-2/3 pl-24">
-              <p className="text-4xl font-semibold text-[#88BC05] mb-10 mr-20 leading-snug">
-                ATC menawarkan <br /> solusi integratif
+              <p className="text-4xl font-semibold text-[#388FC7] mb-10 mr-20 leading-snug">
+              Kami telah menjadi mitra <br/> terpercaya (lebih dari 15 thn)
               </p>
               <p className="text-2xl mr-28 ">
-                Pendekatan kerja dan magang akan menggunakan pendekatan SCRUM
-                Framework, dimana pemagang akan diarahkan untuk merancang solusi
-                melalui lima proses iterative, yaitu: Sprint Planning, Daily
-                SCRUM, SPRINT Review, SPRINTRestrospective, dan Improvement.
+              Bagi perusahaan nasional dan multinasional dalam mendukung pengembangan bisnis dan strategi manajemen dan kompetensi sumber daya manusia. 
+              Kebanggaan berasal dari hubungan jangka panjang yang saling menguntungkan dengan berbagai perusahaan yang memiliki visi untuk sukses, dan komitmen untuk mencapai kesuksesan itu melalui pengembangan sumber daya manusia.
               </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
             <div className="w-2/3 pl-10">
-              <p className="text-4xl font-semibold text-[#E49164] mb-10 mr-20 leading-snug">
-                Solusi-solusi yang <br /> ditawarkan oleh ATC
+              <p className="text-4xl font-semibold text-[#953F3F] mb-10 mr-20 leading-snug">
+              Pengembangan sumber <br /> daya manusia
               </p>
               <p className="text-2xl mr-28 ">
-                Pendekatan kerja dan magang akan menggunakan pendekatan SCRUM
-                Framework, dimana pemagang akan diarahkan untuk merancang solusi
-                melalui lima proses iterative, yaitu: Sprint Planning, Daily
-                SCRUM, SPRINT Review, SPRINTRestrospective, dan Improvement.
+              Merupakan proses yang berkesinambungan yang membutuhkan komitmen yang tinggi dan manajemen yang baik untuk menjadi efektif dalam segala hal. Program pengembangan berkaitan dengan tahap pengembangan perusahaan dan tujuan jangka pendek serta jangka panjang mereka, baik saat start up, dalam ekspansi, dalam masa transisi atau berbalik. 
+              Perusahaan harus merencanakan dan merancang program pembangunan dengan hati-hati sesuai dengan setiap lapisan manajemen seperti : MT (Management Trainee), Leadership Program & Consulting.
               </p>
             </div>
             <div className="w-1/3 mb-6 md:mb-0 flex justify-center">
               <Image
-                src="/assets/whatWeDo/ATC/solusi-ditawarkan.png"
+                src="/assets/whatWeDo/consultingService/rocket.png"
                 alt="Deskripsi gambar"
                 width={317}
                 height={300}
@@ -78,7 +74,7 @@ export default function ATC() {
           <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
             <div className="w-1/3 mb-6 md:mb-0 flex justify-center">
               <Image
-                src="/assets/whatWeDo/ATC/solusi-integratif.png"
+                src="/assets/whatWeDo/consultingService/program-pelatihan.png"
                 alt="Deskripsi gambar"
                 width={317}
                 height={300}
@@ -86,7 +82,7 @@ export default function ATC() {
               />
             </div>
             <div className="w-2/3 pl-24">
-              <p className="text-4xl font-semibold text-[#88BC05] mb-10 mr-5 leading-snug">
+              <p className="text-4xl font-semibold text-[#751F76] mb-10 mr-5 leading-snug">
                 Program pelatihan <br /> yang efektif
               </p>
               <p className="text-2xl mr-28 ">
@@ -107,9 +103,31 @@ export default function ATC() {
               </p>
             </div>
           </div>
-          <OurClients />
-        </div>
+        </div> 
       </section>
+      <div className="relative w-full h-auto">
+      {/* Bagian gambar */}
+      <Image
+        src="/assets/whatWeDo/consultingService/footer.png"
+        alt="Descriptive Alt Text"
+        width={1920} 
+        height={1080} 
+        layout="responsive" 
+        objectFit="cover" 
+        className="pt-52"
+      />
+
+      {/* Bagian teks di atas gambar */}
+      <div className="absolute p-34 top-5 left-1/2 transform -translate-x-1/2 bg-[#D7E9F4] p-6 w-2/5 text-left">
+        <h2 className="text-3xl font-bold text-[#163950]">
+          <span className="text-[#388FC7]">M-Knows Consulting</span> telah memperoleh banyak kesempatan bekerja sama
+        </h2>
+        <p className="text-2x1 mt-2 w-4/5">
+        Dengan lembaga-lembaga swasta dan pemerintah pada proyek-proyek perumusan kebijakan, studi banding, serta undangan untuk menjadi pembicara tamu dalam berbagai kesempatan dan pertemuan atau seminar 
+        untuk berbagi dan memperkenalkan pandangan dan pengetahuan di bidang ekonomi, manajemen dan bisnis.
+        </p>
+      </div>
+    </div>
     </main>
   );
 }

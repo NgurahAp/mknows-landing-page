@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { cardsData, assessmentData } from "./cardsData";
 
-export default function AboutUs() {
+export default function History() {
   return (
     <main>
       <section className="w-full pt-32 bg-white">
         <div className="container mx-auto px-28 ">
-          <h2 className="text-5xl text-[#225677] font-semibold text-center mb-8 py-9">
+          <h2 className="text-5xl text-[#388FC7] font-semibold text-center mb-8 py-9">
             M-Knows Consulting
           </h2>
           <div className="flex flex-col md:flex-row py-10">
@@ -62,50 +61,9 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
-          {/* Card */}
-          <div className="flex flex-wrap justify-center items-center py-5 gap-y-20 gap-x-32">
-            {cardsData.map((card, index) => (
-              <div
-                key={index}
-                className="w-2/5 h-32 bg-[#D7E9F4] rounded-xl flex items-center p-4"
-              >
-                {/* Gambar di sebelah kiri */}
-                <Image
-                  src={card.imageSrc}
-                  alt={card.altText}
-                  width={50}
-                  height={50}
-                  className="mr-10"
-                />
-                {/* Judul di sebelah kanan gambar */}
-                <h2 className="text-3xl">{card.title}</h2>
-              </div>
-            ))}
-          </div>
           <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
             Assessment for Technical Competency
           </h2>
-
-          {/* Render Competency List */}
-          {assessmentData.map((assessment) => (
-            <div
-              key={assessment.id}
-              className="flex flex-col md:flex-row my-4  items-center px-44"
-            >
-              <div className="mb-6 md:mb-0">
-                <h2 className="text-4xl text-[#225677] font-semibold">
-                  {assessment.id}.
-                </h2>
-              </div>
-              <div className="pl-5">
-                {/* Menambahkan dangerouslySetInnerHTML agar entitas HTML terbaca */}
-                <p
-                  className="text-3xl leading-relaxed text-center md:text-left"
-                  dangerouslySetInnerHTML={{ __html: assessment.title }}
-                ></p>
-              </div>
-            </div>
-          ))}
           <div
             className="relative w-full h-[70vh] bg-cover bg-no-repeat bg-center"
             style={{

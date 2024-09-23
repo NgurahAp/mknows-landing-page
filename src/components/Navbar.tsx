@@ -391,7 +391,7 @@ const Navbar = () => {
                         </li>
                         <li>
                           <Link
-                            href="#"
+                            href="/more/historyPage"
                             onClick={handleLinkClick}
                             className="block hover:bg-gray-100 py-2 text-lg"
                           >

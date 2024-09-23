@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function History() {
+export default function About() {
   return (
     <main>
       <section className="w-full pt-32 bg-white">

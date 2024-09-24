@@ -62,6 +62,9 @@ export default function AboutUs() {
               </p>
             </div>
           </div>
+          <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
+            Jasa konsultasi yang sering diambil klien meliputi:
+          </h2>
           {/* Card */}
           <div className="flex flex-wrap justify-center items-center py-5 gap-y-20 gap-x-32">
             {cardsData.map((card, index) => (

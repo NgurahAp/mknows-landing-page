@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cardsData } from "./cardsData";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row py-10">
             <div className="md:w-1/2 ">
               <p className="text-3xl leading-snug">
-                <span className="text-[#388FC7]"> M-Knows Consulting</span>{" "}
+                <span className="text-[#388FC7]"> M-Knows Consulting</span>
                 adalah merk yang dipakai bersama oleh PT. Menara Indonesia dan
                 PT. Menara Pengetahuan Indonesia. PT. Menara Indonesia adalah
                 perusahaan yang menjalankan jasa konsultasi manajemen dan
@@ -60,6 +61,30 @@ export default function About() {
                 Impact, Fun & Motivational.
               </p>
             </div>
+          </div>
+
+          <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
+            Jasa konsultasi yang sering diambil klien meliputi:
+          </h2>
+          {/* Card */}
+          <div className="flex flex-wrap justify-center items-center py-5 gap-y-20 gap-x-32">
+            {cardsData.map((card, index) => (
+              <div
+                key={index}
+                className="w-2/5 h-32 bg-[#D7E9F4] rounded-xl flex items-center p-4"
+              >
+                {/* Gambar di sebelah kiri */}
+                <Image
+                  src={card.imageSrc}
+                  alt={card.altText}
+                  width={50}
+                  height={50}
+                  className="mr-10"
+                />
+                {/* Judul di sebelah kanan gambar */}
+                <h2 className="text-3xl">{card.title}</h2>
+              </div>
+            ))}
           </div>
           <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
             Assessment for Technical Competency

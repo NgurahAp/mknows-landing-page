@@ -11,7 +11,7 @@ export default function VisiMisi() {
           <div className="flex flex-col md:flex-row py-10">
             <div className="md:w-1/2 mb-6 md:mb-0 flex pl-14  justify-center items-center">
               <Image
-                src="/assets/more/visiMisi/Visi.png"
+                src="/assets/more/visiMisi/visi.png"
                 alt="Deskripsi gambar"
                 width={450}
                 height={350}
@@ -46,7 +46,7 @@ export default function VisiMisi() {
             </div>
             <div className="md:w-1/2 mb-6 md:mb-0 flex pl-14  justify-center items-center">
               <Image
-                src="/assets/more/visiMisi/Misi.png"
+                src="/assets/more/visiMisi/misi.png"
                 alt="Deskripsi gambar"
                 width={450}
                 height={350}

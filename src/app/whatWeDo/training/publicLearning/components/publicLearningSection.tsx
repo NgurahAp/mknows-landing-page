@@ -13,10 +13,10 @@ interface PublicLearningSectionProps {
 export default function PublicLearningSection({ training }: PublicLearningSectionProps) {
   return (
     <section className="pt-7 w-96">
-      <div className="container mx-auto mt-10">
+      <div className="container mx-3 mt-10">
         <div >
             <div key={training.id}>
-              <div className="relative h-60 w-96 rounded-[15px] overflow-hidden">
+              <div className="relative h-60 w-11/12 rounded-[15px] overflow-hidden">
                 <Image
                   src={training.image}
                   alt={training.title}

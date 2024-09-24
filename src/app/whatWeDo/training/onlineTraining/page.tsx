@@ -14,7 +14,7 @@ export default function NewTrainingPage() {
             2024
           </h2>
         </div>
-        <Link href="/target-page" className="w-[450px]">
+        <Link href="/whatWeDo/training/onlineTraining/formulir" className="w-[450px]">
           <div className="bg-slate-100 text-[#2D729F] border border-[#388FC7] py-3 px-2 rounded-lg font-medium text-center hover:bg-gray-200">
             Download Jadwal Public Training Tahun 2024
           </div>

@@ -266,7 +266,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="/whatWeDo/outbound"
+                      href="/whatWeDo/consultingService"
                       onClick={() => handleClick("whatWeDo")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
@@ -321,7 +321,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/more/historyPage"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
@@ -330,7 +330,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/more/visiMisi"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
@@ -344,7 +344,7 @@ const UpdateNavbar: React.FC = () => {
                 <ul className="space-y-2 -ml-2">
                   <li>
                     <Link
-                      href="#"
+                      href="/more/ourClients"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
@@ -353,7 +353,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                     href="/more/ourFacilitator"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >

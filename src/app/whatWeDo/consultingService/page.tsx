@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import OurClients from "@/components/OurClients";
 
@@ -7,14 +8,16 @@ export default function ATC() {
       <section
         className="md:min-h-[70vh] min-h-[30vh] mt-16 bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
         style={{
-          backgroundImage: "url('/assets/whatWeDo/ATC/hero-atc-bg.png')",
+          backgroundImage: "url('/assets/whatWeDo/consultingService/service-hero.png')",
         }}
       >
         <div className="w-2/3">
           <div className="md:pl-20 pl-5  flex flex-col justify-center">
             <h1 className="font-bold mb-3 text-xl md:text-5xl leading-10 text-left">
-              Assessment <br /> for Technical Competency
-              <span className="text-[#388FC7]"> (ATC)</span>
+              Consulting Service
+            </h1>
+            <h1 className="font-bold text-xl text-[#388FC7] md:text-5xl leading-10 text-left">
+              M-Knows Consulting
             </h1>
           </div>
         </div>
@@ -22,14 +25,11 @@ export default function ATC() {
       <section className="flex flex-col items-center mt-24 mx-36  min-h-screen ">
         <div className=" mx-auto ">
           <h1 className="text-4xl text-center  font-semibold mb-8">
-            ATC: Solusi Integratif untuk Penilaian Potensi dan Kompetensi SDM
+          Kemitraan SDM dan Bisnis Masa Depan
           </h1>
           <p className="text-3xl text-center mx-28">
-            Adalah mitra (salah satu solusi) dalam mengukur dan menilai potensi
-            serta kompetensi dari sumber daya manusia. ATC menawarkan solusi
-            integratif melalui metode terstandar dan sesuai dengan kebutuhan
-            untuk menyesuaikan dengan kebutuhan pengembangan bakat/minat
-            individu.
+          Mempunyai hubungan jangka panjang dengan perusahaan-perusahaan lokal dan internasional yang berbasis di Indonesia untuk mendukung pengembangan sumber daya manusia mereka serta strategi bisnis dan manajemen. 
+          Program pengembangan ini dirancang untuk meningkatkan keahlian spesifik bahwa perusahaan membutuhkan strategi untuk mengahadapi masa depan.
           </p>
           <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
             <div className="w-1/3 mb-6 md:mb-0 flex justify-center">

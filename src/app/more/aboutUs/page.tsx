@@ -61,6 +61,30 @@ export default function About() {
               </p>
             </div>
           </div>
+
+          <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
+            Jasa konsultasi yang sering diambil klien meliputi:
+          </h2>
+          {/* Card */}
+          <div className="flex flex-wrap justify-center items-center py-5 gap-y-20 gap-x-32">
+            {cardsData.map((card, index) => (
+              <div
+                key={index}
+                className="w-2/5 h-32 bg-[#D7E9F4] rounded-xl flex items-center p-4"
+              >
+                {/* Gambar di sebelah kiri */}
+                <Image
+                  src={card.imageSrc}
+                  alt={card.altText}
+                  width={50}
+                  height={50}
+                  className="mr-10"
+                />
+                {/* Judul di sebelah kanan gambar */}
+                <h2 className="text-3xl">{card.title}</h2>
+              </div>
+            ))}
+          </div>
           <h2 className="text-3xl  font-semibold text-center pb-10 pt-14">
             Assessment for Technical Competency
           </h2>

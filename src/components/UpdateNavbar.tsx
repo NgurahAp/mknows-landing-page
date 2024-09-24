@@ -105,7 +105,7 @@ const UpdateNavbar: React.FC = () => {
                   className="ml-2 h-5"
                 />
               </Link>
-            </li>{" "}
+            </li>
             <li>
               <Link
                 href=""

@@ -3,145 +3,461 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BootcampCategory, bootcampData } from "./bootcampNavbarData";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleClick = (section: string) => {
+    setActiveSection((prevSection) =>
+      prevSection === section ? null : section
+    );
+  };
+
   return (
-    <nav className="bg-white md:h-24 max-w-screen fixed top-0 left-0 w-full z-50 border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl h-full flex items-center justify-between mx-auto p-4">
-        <div className="flex items-center">
-          <Link
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse mr-4"
-          >
-            <Image
-              src="/assets/home/navbar-logo.png"
-              alt="Navbar Logo"
-              width={79}
-              height={24}
-              className="md:w-36 md:h-auto object-contain"
-            />
-          </Link>
-          <div className="relative hidden md:flex items-center">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+    <>
+      <nav className="bg-white md:h-24 max-w-screen fixed top-0 left-0 w-full z-50 border-gray-200 dark:bg-gray-900">
+        <div className="max-w-screen-xl h-full flex items-center justify-between mx-auto p-4">
+          <div className="flex items-center">
+            <Link
+              href="/"
+              className="flex items-center space-x-3 rtl:space-x-reverse mr-4"
+            >
+              <Image
+                src="/assets/home/navbar-logo.png"
+                alt="Navbar Logo"
+                width={79}
+                height={24}
+                className="md:w-36 md:h-auto object-contain"
+              />
+            </Link>
+            <div className="relative hidden md:flex items-center justify-center  pl-20">
+              <div className="relative bg-[#F5F5F5] overflow-hidden w-full h-14 rounded-full">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                  <Image
+                    src="/assets/home/search-icon.png"
+                    alt="Search Icon"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <div className="flex items-center h-full">
+                  <input
+                    type="search"
+                    id="custom-search"
+                    className="block w-full pl-14 text-xl text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-full"
+                    placeholder="Search"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center">
+            <div className="hidden md:flex">
+              <ul className="flex space-x-12 rtl:space-x-reverse">
+                <li>
+                  <Link
+                    href="/"
+                    className="text-black flex text-lg hover:text-gray-400"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href=""
+                    onClick={() => handleClick("bootcampProgram")}
+                    className="text-black flex items-center text-lg hover:text-gray-400"
+                  >
+                    Bootcamp Program
+                    <Image
+                      src="/assets/home/dropdown-icon.png"
+                      alt="Dropdown Icon"
+                      width={14}
+                      height={2}
+                      className="ml-2 h-5"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href=""
+                    onClick={() => handleClick("newTraining")}
+                    className="text-black flex items-center text-lg hover:text-gray-400"
+                  >
+                    New Training
+                    <Image
+                      src="/assets/home/dropdown-icon.png"
+                      alt="Dropdown Icon"
+                      width={14}
+                      height={2}
+                      className="ml-2 h-5"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href=""
+                    onClick={() => handleClick("whatWeDo")}
+                    className="text-black flex items-center text-lg hover:text-gray-400"
+                  >
+                    What We Do
+                    <Image
+                      src="/assets/home/dropdown-icon.png"
+                      alt="Dropdown Icon"
+                      width={14}
+                      height={2}
+                      className="ml-2 h-5"
+                    />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href=""
+                    onClick={() => handleClick("more")}
+                    className="text-black flex items-center text-lg hover:text-gray-400"
+                  >
+                    More
+                    <Image
+                      src="/assets/home/dropdown-icon.png"
+                      alt="Dropdown Icon"
+                      width={14}
+                      height={2}
+                      className="ml-2 h-5"
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-4"
+              aria-controls="navbar-search"
+              aria-expanded={isMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
               <svg
-                className="w-4 h-4 text-gray-500 dark:text-gray-400"
+                className="w-5 h-5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                viewBox="0 0 20 20"
+                viewBox="0 0 17 14"
               >
                 <path
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
+          <div className="px-2 pt-2 pb-3">
+            <div className="relative bg-[#F5F5F5] overflow-hidden w-full rounded-3xl">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                <Image
+                  src="/assets/home/search-icon.png"
+                  alt="Search Icon"
+                  width={24}
+                  height={24}
+                />
+              </div>
+              <div className="flex items-center h-full">
+                <input
+                  type="search"
+                  id="search-navbar-mobile"
+                  className="block w-full pl-14 text-lg text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-12"
+                  placeholder="Search"
+                />
+              </div>
             </div>
-            <input
-              type="text"
-              id="search-navbar"
-              className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Search..."
-            />
           </div>
-        </div>
 
-        <div className="flex items-center">
-          <div className="hidden md:flex">
-            <ul className="flex space-x-8 rtl:space-x-reverse">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-gray-900 hover:text-blue-700 dark:text-white dark:hover:text-blue-500"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-4"
-            aria-controls="navbar-search"
-            aria-expanded={isMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link
+              href="/about"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
             >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
-          </button>
+              About
+            </Link>
+            <Link
+              href="/services"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Services
+            </Link>
+            <Link
+              href="/contact"
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Contact
+            </Link>
+          </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile menu */}
-      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link
-            href="/about"
-            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-          >
-            About
-          </Link>
-          <Link
-            href="/services"
-            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Services
-          </Link>
-          <Link
-            href="/contact"
-            className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Contact
-          </Link>
-        </div>
-        <div className="px-2 pt-2 pb-3">
-          <input
-            type="text"
-            id="search-navbar-mobile"
-            className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search..."
-          />
-        </div>
-      </div>
-    </nav>
+      {/* Section yang ditampilkan setelah klik navbar */}
+      {activeSection === "bootcampProgram" && (
+        <section className="bg-white w-full h-auto flex items-center justify-center fixed top-24 left-0 z-50">
+          <div className="container mx-auto px-4 py-10">
+            <div className="flex items-center my-4 w-full mx-auto">
+              <Image
+                src="/assets/home/navbarLine.png"
+                alt="Dropdown Icon"
+                layout="responsive"
+                width={100}
+                height={14}
+                className="w-full h-auto -ml-2"
+              />
+            </div>
+            <div className="w-full overflow-x-auto">
+              <div className="flex pb-4">
+                {bootcampData.map(
+                  (category: BootcampCategory, index: number) => (
+                    <div
+                      className="flex-shrink-0 w-auto max-w-2/4 mx-10"
+                      key={index}
+                    >
+                      {/* Lebar otomatis dengan batas maksimal 50% */}
+                      <h3 className="font-semibold text-lg mb-2 underline">
+                        {category.category}
+                      </h3>
+                      <ul className="space-y-2">
+                        {category.items.map((item: string, idx: number) => (
+                          <li key={idx}>
+                            <Link
+                              href="#"
+                              // onClick={handleLinkClick}
+                              className="block hover:bg-gray-100 py-2 text-lg"
+                            >
+                              {item}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+            <div className="mt-10">
+              <Link
+                href="/bootcamp"
+                onClick={() => handleClick("bootcampProgram")}
+              >
+                <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
+                  Lihat Selengkapnya
+                </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeSection === "newTraining" && (
+        <section className="bg-white w-full h-auto flex items-center justify-center fixed top-24 left-0 z-50">
+          <div className="container mx-auto px-4 py-10">
+            <div className="flex">
+              {/* Column 1 - 1/4 width */}
+              <div className="w-full pr-4">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="#"
+                      // onClick={handleLinkClick}
+                      className="block hover:bg-gray-100 py-2 text-lg "
+                    >
+                      AI Sales Tools
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      // onClick={handleLinkClick}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Virtual Reality
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeSection === "whatWeDo" && (
+        <section className="bg-white w-full h-auto flex items-center justify-center fixed top-24 left-0 z-50">
+          <div className="container mx-auto px-4 py-10">
+            <div className="flex justify-center ">
+              {/* Column 1 - 1/4 width */}
+              <div className="w-1/3 ">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="/whatWeDo/training"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg "
+                    >
+                      Public, In-House Training, Online Learning
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/whatWeDo/hybridOfficerDevelopment"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Hybrid Officer Development Crash Program
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/whatWeDo/atc"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Asessment for Technical Competency
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Column 2 - 2/4 width */}
+              <div className="w-1/3 ">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="/whatWeDo/lms"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Learning Management System
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/whatWeDo/consultingService"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Consulting Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/whatWeDo/outbound"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Outbound & Gathering
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Column 3 - 1/4 width */}
+              <div className="w-1/3 ">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="/whatWeDo/coaching"
+                      onClick={() => handleClick("whatWeDo")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Executive Coaching & Bussines Mentoring
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeSection === "more" && (
+        <section className="bg-white w-full h-auto flex items-center justify-center fixed top-24 left-0 z-50">
+          <div className="container mx-auto px-4 py-10">
+            <div className="flex  ">
+              {/* Column 1 - 1/4 width */}
+              <div className="w-1/3 ">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="/more/aboutUs"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg "
+                    >
+                      About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/more/historyPage"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      History
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/more/visiMisi"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Vision & Mission
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Column 2 - 2/4 width */}
+              <div className="w-1/3 ">
+                <ul className="space-y-2 -ml-2">
+                  <li>
+                    <Link
+                      href="/more/ourClients"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Our Clients
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/more/ourFacilitator"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Our Facilitator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="#"
+                      onClick={() => handleClick("more")}
+                      className="block hover:bg-gray-100 py-2 text-lg"
+                    >
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 

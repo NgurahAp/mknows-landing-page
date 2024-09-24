@@ -353,7 +353,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                     href="/more/ourFacilitator"
+                      href="/more/ourFacilitator"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >
@@ -362,7 +362,7 @@ const UpdateNavbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/more/contactUs"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >

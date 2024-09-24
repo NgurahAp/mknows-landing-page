@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { cardsData } from "./cardsData";
 
 export default function About() {
   return (
@@ -11,7 +12,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row py-10">
             <div className="md:w-1/2 ">
               <p className="text-3xl leading-snug">
-                <span className="text-[#388FC7]"> M-Knows Consulting</span>{" "}
+                <span className="text-[#388FC7]"> M-Knows Consulting</span>
                 adalah merk yang dipakai bersama oleh PT. Menara Indonesia dan
                 PT. Menara Pengetahuan Indonesia. PT. Menara Indonesia adalah
                 perusahaan yang menjalankan jasa konsultasi manajemen dan

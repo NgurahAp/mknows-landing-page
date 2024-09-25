@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BootcampCategory, bootcampData } from "./bootcampNavbarData";
+import MobileNavbar from "./navbar/mobile";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const toggleMenu = () => {
@@ -163,49 +165,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-          <div className="px-2 pt-2 pb-3">
-            <div className="relative bg-[#F5F5F5] overflow-hidden w-full rounded-3xl">
-              <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
-                <Image
-                  src="/assets/home/search-icon.png"
-                  alt="Search Icon"
-                  width={24}
-                  height={24}
-                />
-              </div>
-              <div className="flex items-center h-full">
-                <input
-                  type="search"
-                  id="search-navbar-mobile"
-                  className="block w-full pl-14 text-lg text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-12"
-                  placeholder="Search"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="/about"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              About
-            </Link>
-            <Link
-              href="/services"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Services
-            </Link>
-            <Link
-              href="/contact"
-              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-            >
-              Contact
-            </Link>
-          </div>
-        </div>
+        <MobileNavbar isMenuOpen={isMenuOpen} />
       </nav>
 
       {/* Section yang ditampilkan setelah klik navbar */}

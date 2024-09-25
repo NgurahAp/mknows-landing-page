@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from "lucide-react";
 
 interface DropdownItem {
   title: string;
@@ -15,19 +15,19 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { title: "About", href: "/about" },
+  { title: "Home", href: "/" },
   { title: "Bootcamp Program", href: "/bootcamp" },
   {
     title: "New Training",
-    href: "/",
+    href: "#",
     dropdown: [
-      { title: "Online Courses", href: "/online-courses" },
-      { title: "Workshops", href: "/workshops" },
+      { title: "AI Sales Tools", href: "#" },
+      { title: "Virtual Reality", href: "#" },
     ],
   },
   {
     title: "What We Do",
-    href: "/",
+    href: "#",
     dropdown: [
       { title: "Services", href: "/services" },
       { title: "Projects", href: "/projects" },
@@ -35,7 +35,7 @@ const navItems: NavItem[] = [
   },
   {
     title: "More",
-    href: "/",
+    href: "#",
     dropdown: [
       { title: "FAQ", href: "/faq" },
       { title: "Contact", href: "/contact" },
@@ -44,10 +44,10 @@ const navItems: NavItem[] = [
 ];
 
 const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
-  
   const [openDropdowns, setOpenDropdowns] = useState<{
     [key: string]: boolean;
   }>({});
+
 
   const toggleDropdown = (title: string) => {
     setOpenDropdowns((prev) => ({ ...prev, [title]: !prev[title] }));

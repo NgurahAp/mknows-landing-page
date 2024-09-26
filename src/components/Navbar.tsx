@@ -11,10 +11,13 @@ const Navbar: React.FC = () => {
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-  
+   const toggleMenu = () => {
+     setIsMenuOpen((prev) => !prev);
+   };
+
+   const closeMenu = () => {
+     setIsMenuOpen(false);
+   };
   const handleClick = (section: string) => {
     setActiveSection((prevSection) =>
       prevSection === section ? null : section
@@ -165,7 +168,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile menu */}
-        <MobileNavbar isMenuOpen={isMenuOpen} />
+        <MobileNavbar isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       </nav>
 
       {/* Section yang ditampilkan setelah klik navbar */}

@@ -4,13 +4,27 @@ import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import { navMobileItems } from "./navMobileItems";
 
-const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
+interface MobileNavbarProps {
+  isMenuOpen: boolean;
+  closeMenu: () => void;
+}
+
+const MobileNavbar: React.FC<MobileNavbarProps> = ({
+  isMenuOpen,
+  closeMenu,
+}) => {
   const [openDropdowns, setOpenDropdowns] = useState<{
     [key: string]: boolean;
   }>({});
 
+  // Toggle specific dropdown
   const toggleDropdown = (title: string) => {
     setOpenDropdowns((prev) => ({ ...prev, [title]: !prev[title] }));
+  };
+
+  // Function to close all dropdowns
+  const closeAllDropdowns = () => {
+    setOpenDropdowns({});
   };
 
   return (
@@ -59,6 +73,10 @@ const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
                         key={dropdownItem.title}
                         href={dropdownItem.href}
                         className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        onClick={() => {
+                          closeAllDropdowns(); // Close all dropdowns after click
+                          closeMenu(); // Also close the main menu
+                        }}
                       >
                         {dropdownItem.title}
                       </Link>
@@ -70,6 +88,7 @@ const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
               <Link
                 href={item.href}
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                onClick={closeMenu}
               >
                 {item.title}
               </Link>

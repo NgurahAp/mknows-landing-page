@@ -33,8 +33,8 @@ export default function RootLayout({
         />
       </head>
       <body className={poppins.className}>
-        {/* <Navbar /> */}
-        <UpdateNavbar/>
+        <Navbar />
+        {/* <UpdateNavbar/> */}
         <Providers>{children}</Providers>
         <Footer />
       </body>

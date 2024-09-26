@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  
   const handleClick = (section: string) => {
     setActiveSection((prevSection) =>
       prevSection === section ? null : section

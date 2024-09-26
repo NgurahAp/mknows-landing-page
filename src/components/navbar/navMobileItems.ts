@@ -1,5 +1,5 @@
 export interface DropdownItem {
-  title: string;
+  dropdownTitle: string;
   href: string;
 }
 
@@ -16,8 +16,8 @@ export const navMobileItems: NavItem[] = [
     title: "New Training",
     href: "#",
     dropdown: [
-      { title: "AI Sales Tools", href: "#" },
-      { title: "Virtual Reality", href: "#" },
+      { dropdownTitle: "AI Sales Tools", href: "#" },
+      { dropdownTitle: "Virtual Reality", href: "#" },
     ],
   },
   {
@@ -25,31 +25,31 @@ export const navMobileItems: NavItem[] = [
     href: "#",
     dropdown: [
       {
-        title: "Public, In-House Training, Online Learning",
+        dropdownTitle: "Public, In-House Training, Online Learning",
         href: "/whatWeDo/training",
       },
       {
-        title: "Hybrid Officer Development Crash Program",
+        dropdownTitle: "Hybrid Officer Development Crash Program",
         href: "/whatWeDo/hybridOfficerDevelopment",
       },
       {
-        title: "Asessment for Technical Competency",
+        dropdownTitle: "Asessment for Technical Competency",
         href: "/whatWeDo/atc",
       },
       {
-        title: "Learning Management System",
+        dropdownTitle: "Learning Management System",
         href: "/whatWeDo/lms",
       },
       {
-        title: "Consulting Service",
+        dropdownTitle: "Consulting Service",
         href: "/whatWeDo/consultingService",
       },
       {
-        title: "Outbound & Gathering",
+        dropdownTitle: "Outbound & Gathering",
         href: "/whatWeDo/outbound",
       },
       {
-        title: "Executive Coaching & Bussines Mentoring",
+        dropdownTitle: "Executive Coaching & Bussines Mentoring",
         href: "/whatWeDo/coaching",
       },
     ],
@@ -58,12 +58,12 @@ export const navMobileItems: NavItem[] = [
     title: "More",
     href: "#",
     dropdown: [
-      { title: "About Us", href: "/more/aboutUs" },
-      { title: "History", href: "/more/historyPage" },
-      { title: "Vision & Mission", href: "/more/visiMisi" },
-      { title: "Our Clients", href: "/more/ourClients" },
-      { title: "Our Facilitator", href: "/more/ourFacilitator" },
-      { title: "Contact Us", href: "/more/contactUs" },
+      { dropdownTitle: "About Us", href: "/more/aboutUs" },
+      { dropdownTitle: "History", href: "/more/historyPage" },
+      { dropdownTitle: "Vision & Mission", href: "/more/visiMisi" },
+      { dropdownTitle: "Our Clients", href: "/more/ourClients" },
+      { dropdownTitle: "Our Facilitator", href: "/more/ourFacilitator" },
+      { dropdownTitle: "Contact Us", href: "/more/contactUs" },
     ],
   },
 ];

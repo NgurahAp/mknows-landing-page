@@ -70,15 +70,20 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
                   <div className="pl-6 space-y-1">
                     {item.dropdown.map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.title}
+                        key={dropdownItem.dropdownTitle}
                         href={dropdownItem.href}
-                        className="block px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        className="relative block px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                         onClick={() => {
                           closeAllDropdowns(); // Close all dropdowns after click
                           closeMenu(); // Also close the main menu
                         }}
                       >
-                        {dropdownItem.title}
+                        {/* Vertical line added here */}
+                        <span
+                          className="absolute left-0  w-1 h-5 bg-[#ACEE07]"
+                          aria-hidden="true"
+                        ></span>
+                        {dropdownItem.dropdownTitle}
                       </Link>
                     ))}
                   </div>

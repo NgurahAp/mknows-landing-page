@@ -2,52 +2,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronDown } from "lucide-react";
-
-interface DropdownItem {
-  title: string;
-  href: string;
-}
-
-interface NavItem {
-  title: string;
-  href: string;
-  dropdown?: DropdownItem[];
-}
-
-const navItems: NavItem[] = [
-  { title: "Home", href: "/" },
-  { title: "Bootcamp Program", href: "/bootcamp" },
-  {
-    title: "New Training",
-    href: "#",
-    dropdown: [
-      { title: "AI Sales Tools", href: "#" },
-      { title: "Virtual Reality", href: "#" },
-    ],
-  },
-  {
-    title: "What We Do",
-    href: "#",
-    dropdown: [
-      { title: "Services", href: "/services" },
-      { title: "Projects", href: "/projects" },
-    ],
-  },
-  {
-    title: "More",
-    href: "#",
-    dropdown: [
-      { title: "FAQ", href: "/faq" },
-      { title: "Contact", href: "/contact" },
-    ],
-  },
-];
+import { navMobileItems } from "./navMobileItems";
 
 const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
   const [openDropdowns, setOpenDropdowns] = useState<{
     [key: string]: boolean;
   }>({});
-
 
   const toggleDropdown = (title: string) => {
     setOpenDropdowns((prev) => ({ ...prev, [title]: !prev[title] }));
@@ -77,7 +37,7 @@ const MobileNavbar: React.FC<{ isMenuOpen: boolean }> = ({ isMenuOpen }) => {
       </div>
 
       <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        {navItems.map((item) => (
+        {navMobileItems.map((item) => (
           <div key={item.title} className="border-b border-gray-200">
             {item.dropdown ? (
               <>

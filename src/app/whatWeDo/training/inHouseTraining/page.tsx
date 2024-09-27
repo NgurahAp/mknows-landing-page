@@ -6,7 +6,7 @@ export default function InHouseTraining() {
     <main>
       <section className="w-full pt-32 bg-white">
         <div className="container mx-auto px-4 lg:px-24 xl:px-48">
-          <h2 className="text-3xl md:text-4xl xl:text-5xl text-[#225677] font-bold text-center mb-6 md:mb-8 py-9">
+          <h2 className="text-3xl md:text-4xl xl:text-5xl text-[#225677] font-bold text-center mb-6 md:mb-8">
             In-House Training
           </h2>
 
@@ -45,7 +45,7 @@ export default function InHouseTraining() {
                 segera setelah selesai karena didasarkan pada kebutuhan nyata di tempat kerja.
               </p>
             </div>
-            <div className="md:w-1/2 mb-6 md:mb-0 flex items-center justify-center">
+            <div className="md:w-1/2 mb-6 md:mb-0 flex items-center justify-center py-5">
               <Image
                 src="/assets/whatWeDo/training/inHouse2.png"
                 alt="Deskripsi gambar"

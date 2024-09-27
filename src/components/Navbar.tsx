@@ -11,13 +11,13 @@ const Navbar: React.FC = () => {
 
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
-   const toggleMenu = () => {
-     setIsMenuOpen((prev) => !prev);
-   };
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
-   const closeMenu = () => {
-     setIsMenuOpen(false);
-   };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
   const handleClick = (section: string) => {
     setActiveSection((prevSection) =>
       prevSection === section ? null : section
@@ -407,7 +407,7 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/more/contactUs"
                       onClick={() => handleClick("more")}
                       className="block hover:bg-gray-100 py-2 text-lg"
                     >

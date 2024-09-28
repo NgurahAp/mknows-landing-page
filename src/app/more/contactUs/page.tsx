@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <div className="flex pt-32 h-screen w-screen justify-center items-center">
+    <div className="flex pt-32 justify-center items-center">
       <div className="rounded-lg p-8 max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="flex justify-center items-center bg-[#EDFDC4] rounded-lg p-4">
           <Image

@@ -6,7 +6,7 @@ export default function Training() {
   return (
     <main>
       <section
-        className="md:min-h-[70vh] min-h-[25vh] mt-16 bg-cover bg-no-repeat bg-center max-w-screen flex items-center"
+        className="md:min-h-[70vh] min-h-[25vh] mt-16 bg-cover bg-no-repeat bg-center flex items-center"
         style={{
           backgroundImage:
             "url('/assets/whatWeDo/hybridOfficer/heroSection.png')",
@@ -23,7 +23,7 @@ export default function Training() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-center md:p-20  p-10 max-w-screen ">
+      <section className="flex flex-col items-center md:p-20  p-10 ">
         {/* Pengembangan program singkat hibrid */}
         <div className="text-center max-w-full mx-auto ">
           <h1 className="md:text-4xl text-2xl text-[#648B04] font-semibold mb-8">

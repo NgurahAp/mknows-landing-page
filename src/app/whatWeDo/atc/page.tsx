@@ -12,7 +12,7 @@ export default function ATC() {
       >
         <div className="w-2/3">
           <div className="md:pl-20 pl-5  flex flex-col justify-center">
-            <h1 className="font-bold mb-3 text-xl md:text-5xl leading-10 text-left">
+            <h1 className="font-bold mb-3 text-xl md:text-5xl  md:leading-10 leading-6 text-left">
               Assessment <br /> for Technical Competency
               <span className="text-[#388FC7]"> (ATC)</span>
             </h1>
@@ -31,7 +31,7 @@ export default function ATC() {
             untuk menyesuaikan dengan kebutuhan pengembangan bakat/minat
             individu.
           </p>
-          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 py-16 ">
+          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 pt-16 ">
             <div className="md:w-1/3 w-4/5 mb-6  flex justify-center">
               <Image
                 src="/assets/whatWeDo/ATC/solusi-integratif.png"
@@ -41,7 +41,7 @@ export default function ATC() {
                 className="rounded-lg shadow-md "
               />
             </div>
-            <div className="w-2/3 md:pl-24 pl-0">
+            <div className="md:w-2/3 w-10/12 md:pl-24 pl-0">
               <p className="md:text-4xl text-2xl font-semibold text-[#88BC05] md:mb-10 mb-5 md:mr-20 mr-0 leading-snug">
                 ATC menawarkan <br /> solusi integratif
               </p>
@@ -53,8 +53,8 @@ export default function ATC() {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 py-16 ">
-            <div className="w-2/3 md:pl-24 pl-0">
+          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 pt-10 ">
+            <div className="md:w-2/3 w-10/12 md:pl-24 pl-0">
               <p className="md:text-4xl text-2xl font-semibold text-[#88BC05] md:mb-10 mb-5 md:mr-20 mr-0 leading-snug">
                 Solusi-solusi yang <br /> ditawarkan oleh ATC
               </p>
@@ -75,7 +75,7 @@ export default function ATC() {
               />
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 py-16 ">
+          <div className="flex flex-col md:flex-row items-center md:px-7 px-0 pt-16 ">
             <div className="md:w-1/3 w-4/5 mb-10 flex justify-center">
               <Image
                 src="/assets/whatWeDo/ATC/solusi-integratif.png"
@@ -85,7 +85,7 @@ export default function ATC() {
                 className="rounded-lg shadow-md "
               />
             </div>
-            <div className="w-2/3 md:pl-24 pl-0">
+            <div className="md:w-2/3 w-10/12 md:pl-24 pl-0">
               <p className="md:text-4xl text-2xl font-semibold text-[#88BC05] md:mb-10 mb-5 md:mr-20 mr-0 leading-snug">
                 Program pelatihan <br /> yang efektif
               </p>

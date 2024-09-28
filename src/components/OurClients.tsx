@@ -23,7 +23,7 @@ export default function OurClients() {
         Our Clients
       </h2>
       <Marquee>
-        <div className="w-full lg:h-24 md:h-14 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
+        <div className="w-full md:h-24 h-16 overflow-x-auto flex space-x-12 p-3 md:my-5 my-2 scrollbar-hide">
           {imagesRow1.map((src, index) => (
             <div key={index} className="flex-shrink-0 h-full">
               <Image
@@ -39,7 +39,7 @@ export default function OurClients() {
         </div>
       </Marquee>
       <Marquee direction="right">
-        <div className="w-full md:h-14 lg:h-24 overflow-x-auto flex space-x-12 p-3 my-5 scrollbar-hide">
+        <div className="w-full h-16 md:h-24 overflow-x-auto flex space-x-12 p-3 md:my-5 my-2 scrollbar-hide">
           {imagesRow2.map((src, index) => (
             <div key={index} className="flex-shrink-0 h-full">
               <Image
@@ -55,7 +55,7 @@ export default function OurClients() {
         </div>
       </Marquee>
       <Marquee>
-        <div className="w-full md:h-14 lg:h-24 lg:overflow-x-auto flex space-x-12 p-3 my-5  scrollbar-hide">
+        <div className="w-full h-16 md:h-24 lg:overflow-x-auto flex space-x-12 p-3 md:my-5 my-2  scrollbar-hide">
           {imagesRow3.map((src, index) => (
             <div key={index} className="flex-shrink-0 h-full">
               <Image

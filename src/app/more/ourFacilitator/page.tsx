@@ -25,7 +25,7 @@ const Facilitator: React.FC<FacilitatorProps> = ({
   );
 
   const imageContent = (
-    <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center items-center">
+    <div className="md:w-1/3 md:mb-0 flex justify-center items-center py-10">
       <Image
         src={imageSrc}
         alt={imageAlt}
@@ -37,7 +37,7 @@ const Facilitator: React.FC<FacilitatorProps> = ({
   );
 
   return (
-    <div className="flex flex-col justify-center items-center md:flex-row pt-10 pb-20">
+    <div className="flex flex-col justify-center items-center md:flex-row pb-20">
       {isReversed ? (
         <>
           {textContent}
@@ -58,7 +58,7 @@ export default function OurFacilitator() {
   return (
     <main>
       <section className="w-full pt-32 bg-white">
-        <div className="container mx-auto px-56">
+        <div className="container mx-auto px-10">
           <h2 className="text-5xl text-[#388FC7] font-semibold text-center mb-8 py-9">
             Facilitator
           </h2>

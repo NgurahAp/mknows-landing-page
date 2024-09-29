@@ -18,7 +18,7 @@ export default function Coaching() {
       >
         <div className="w-2/3">
           <div className="md:pl-20 pl-5  flex flex-col justify-center">
-            <h1 className="font-semibold  text-xl  md:text-5xl leading-[50px] text-left">
+            <h1 className="font-semibold  text-xl  md:text-5xl md:leading-10 leading-5 text-left">
               Executive Coaching & <br />
               <span className="text-[#388FC7] "> Business Mentoring</span>
             </h1>
@@ -26,16 +26,16 @@ export default function Coaching() {
         </div>
       </section>
       <section className="flex flex-col  pt-20 mx-auto w-11/12  min-h-screen ">
-        <h1 className="text-5xl text-center  font-medium mb-10">
+        <h1 className="md:text-5xl text-2xl text-center mx-10  font-medium mb-10">
           Peningkatan Keterampilan Kerja untuk Tim Efektif
         </h1>
-        <p className="text-3xl text-center pb-10 mx-48">
+        <p className="md:text-3xl text-xl text-center pb-10 md:mx-48 mx-10">
           Program ini bertujuan untuk membantu peserta dalam memperoleh
           pengetahuan dan keterampilan fungsional yang dapat mereka terapkan di
           tempat kerja, khususnya bagi Anda yang memiliki tim (rekan kerja).
         </p>
         <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
-          <div className="w-1/3 mb-6 md:mb-0 flex justify-center">
+          <div className="md:w-1/3 w-full mb-16 md:mb-0 flex justify-center">
             <Image
               src="/assets/whatWeDo/coaching/tujuan-pendamping.png"
               alt="Deskripsi gambar"
@@ -44,11 +44,11 @@ export default function Coaching() {
               className="rounded-lg shadow-md "
             />
           </div>
-          <div className="w-2/3 pl-24">
-            <p className="text-4xl font-semibold text-[#2D729F] mb-10 mr-20 leading-snug">
+          <div className="md:w-2/3 w-full md:pl-24">
+            <p className="md:text-4xl text-2xl font-semibold text-[#2D729F] md:mb-10 mb-5 mr-20 leading-snug">
               Tujuan Pendampingan
             </p>
-            <p className="text-3xl mr-28 ">
+            <p className="md:text-3xl text-xl mr-28 ">
               Mengatasi semua kesulitan yang di hadapi bawahan dalam mengerjakan
               tugas atau performance yang tidak mencapai dengan ketentuan yang
               diperintahkan sehingga daripada itu meningkatkan keahlian tertentu
@@ -57,12 +57,12 @@ export default function Coaching() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row items-center px-7 py-16 ">
-          <div className="w-2/3 pl-16">
-            <p className="text-4xl font-semibold text-[#ACEE07] mb-10 mr-20 leading-snug">
+        <div className="flex flex-col md:flex-row items-center px-7  md:py-16 ">
+          <div className="md:w-2/3 w-full md:pl-24">
+            <p className="md:text-4xl text-2xl font-semibold text-[#ACEE07] mb-10 mr-20 leading-snug">
               Topik yang ditawarkan
             </p>
-            <div className="text-3xl mr-28 ">
+            <div className="md:text-3xl text-xl md:mr-28 ">
               <ul>
                 {topik.map((item) => (
                   <li key={item.number}>
@@ -77,7 +77,7 @@ export default function Coaching() {
               </h1>
             </div>
           </div>
-          <div className="w-1/3 mb-6 md:mb-0 flex justify-center">
+          <div className="md:w-1/3 w-full my-16 md:mb-0 flex justify-center">
             <Image
               src="/assets/whatWeDo/coaching/topik-ditawarkan.png"
               alt="Deskripsi gambar"

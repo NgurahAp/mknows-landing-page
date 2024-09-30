@@ -90,15 +90,15 @@ export default function About() {
             Assessment for Technical Competency
           </h2>
           <div
-            className="relative w-full h-[70vh] bg-cover bg-no-repeat bg-center"
+            className="relative w-full h-screen bg-cover bg-no-repeat bg-center"
             style={{
               backgroundImage: "url('/assets/more/aboutUs/last-pict.png')",
             }}
           >
             {/* Kotak shadow di tengah */}
-            <div className="absolute w-11/12 h-5/6 rounded-lg bg-[#302A2A4D] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+            <div className="absolute w-11/12 md:h-5/6 rounded-lg bg-[#302A2A4D] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
               {/* Tulisan berwarna putih */}
-              <h2 className="text-white md:text-4xl text-[20px] md:px-16 px-2  ">
+              <h2 className="text-white md:text-4xl text-[20px] md:px-16 px-2 py-12 ">
                 Program pelatihan unggulan yang banyak di ambil klien M-Knows
                 antara lain meliputi topik: Marketing, Sales Distribution,
                 Service, Leadership, Managerial, Supervisory, Credit Management,

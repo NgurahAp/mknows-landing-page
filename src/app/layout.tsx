@@ -4,7 +4,6 @@ import "./globals.css";
 import Providers from "./providers";
 import Navbar from "@/components/Navbar";
 import Footer from "../components/Footer";
-import UpdateNavbar from "@/components/UpdateNavbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({

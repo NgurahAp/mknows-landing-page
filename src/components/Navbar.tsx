@@ -198,14 +198,13 @@ const Navbar: React.FC = () => {
                         {category.category}
                       </h3>
                       <ul className="space-y-2">
-                        {category.items.map((item: string, idx: number) => (
+                        {category.items.map((item, idx) => (
                           <li key={idx}>
                             <Link
-                              href="#"
-                              // onClick={handleLinkClick}
+                              href={item.href}
                               className="block hover:bg-gray-100 py-2 text-lg"
                             >
-                              {item}
+                              {item.name}
                             </Link>
                           </li>
                         ))}

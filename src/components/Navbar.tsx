@@ -7,7 +7,6 @@ import MobileNavbar from "./navbar/mobile";
 import { ChevronDown } from "lucide-react";
 import BootcampSection from "./navbar/bootcampSection";
 
-
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,8 +27,8 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="bg-white md:h-24 max-w-screen fixed top-0 left-0 w-full z-50 border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl h-full flex items-center justify-between mx-auto p-4">
+      <nav className="bg-white md:h-24 w-screen fixed top-0 left-0  z-50 border-gray-200 dark:bg-gray-900">
+        <div className="w-11/12 h-full flex items-center justify-between mx-auto p-4">
           <div className="flex items-center">
             <Link
               href="/"
@@ -173,9 +172,7 @@ const Navbar: React.FC = () => {
 
       {/* Section yang ditampilkan setelah klik navbar */}
       {activeSection === "bootcampProgram" && (
-
         <BootcampSection handleClick={handleClick} />
-
       )}
 
       {activeSection === "newTraining" && (

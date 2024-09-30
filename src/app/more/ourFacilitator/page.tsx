@@ -19,8 +19,8 @@ const Facilitator: React.FC<FacilitatorProps> = ({
 }) => {
   const textContent = (
     <div className="md:w-2/3">
-      <h2 className="text-5xl text-[#388FC7] pb-5">{name}</h2>
-      <p className="text-3xl leading-snug">{description}</p>
+      <h2 className="md:text-5xl text-[24px] text-[#388FC7] pb-5">{name}</h2>
+      <p className="md:text-3xl text-[20px] leading-snug">{description}</p>
     </div>
   );
 

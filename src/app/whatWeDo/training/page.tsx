@@ -43,7 +43,7 @@ export default function Training() {
             {/* Looping melalui data trainingCategories */}
             {trainingCategories.map((category, index) => (
               <Link href={category.link} key={index}>
-                <div className="w-96 m-10 cursor-pointer">
+                <div className="md:w-96 w-80 m-10 cursor-pointer">
                   <div className="relative h-56 rounded-3xl overflow-hidden">
                     <Image
                       src={category.imageSrc}

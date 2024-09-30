@@ -5,10 +5,10 @@ import { useData } from "@/hooks/fetchData";
 import { categoryData } from "./categoryData";
 
 const CategorySection = () => {
-  const { data, isLoading, isError, error } = useData();
+  // const { data, isLoading, isError, error } = useData();
 
-  if (isLoading) return <div className="text-center">Loading...</div>;
-  if (isError) return <div>Error: {(error as Error).message}</div>; 
+  // if (isLoading) return <div className="text-center">Loading...</div>;
+  // if (isError) return <div>Error: {(error as Error).message}</div>; 
 
   return (
     <section className="pb-16 pt-7 min-h-[100vh]">

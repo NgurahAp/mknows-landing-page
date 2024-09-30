@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { BootcampCategory, bootcampData } from "./bootcampNavbarData";
 import MobileNavbar from "./navbar/mobile";
+import { ChevronDown } from "lucide-react";
+
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,12 +83,12 @@ const Navbar: React.FC = () => {
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     Bootcamp Program
-                    <Image
-                      src="/assets/home/dropdown-icon.png"
-                      alt="Dropdown Icon"
-                      width={14}
-                      height={2}
-                      className="ml-2 h-5"
+                    <ChevronDown
+                      className={`w-5 h-5 ml-2 transition-transform duration-200 ${
+                        activeSection === "bootcampProgram"
+                          ? "transform rotate-180"
+                          : ""
+                      }`}
                     />
                   </Link>
                 </li>
@@ -97,12 +99,12 @@ const Navbar: React.FC = () => {
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     New Training
-                    <Image
-                      src="/assets/home/dropdown-icon.png"
-                      alt="Dropdown Icon"
-                      width={14}
-                      height={2}
-                      className="ml-2 h-5"
+                    <ChevronDown
+                      className={`w-5 h-5 ml-2 transition-transform duration-200 ${
+                        activeSection === "newTraining"
+                          ? "transform rotate-180"
+                          : ""
+                      }`}
                     />
                   </Link>
                 </li>
@@ -113,12 +115,12 @@ const Navbar: React.FC = () => {
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     What We Do
-                    <Image
-                      src="/assets/home/dropdown-icon.png"
-                      alt="Dropdown Icon"
-                      width={14}
-                      height={2}
-                      className="ml-2 h-5"
+                    <ChevronDown
+                      className={`w-5 h-5 ml-2 transition-transform duration-200 ${
+                        activeSection === "whatWeDo"
+                          ? "transform rotate-180"
+                          : ""
+                      }`}
                     />
                   </Link>
                 </li>
@@ -129,12 +131,10 @@ const Navbar: React.FC = () => {
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     More
-                    <Image
-                      src="/assets/home/dropdown-icon.png"
-                      alt="Dropdown Icon"
-                      width={14}
-                      height={2}
-                      className="ml-2 h-5"
+                    <ChevronDown
+                      className={`w-5 h-5 ml-2 transition-transform duration-200 ${
+                        activeSection === "more" ? "transform rotate-180" : ""
+                      }`}
                     />
                   </Link>
                 </li>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-4"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ml-4"
               aria-controls="navbar-search"
               aria-expanded={isMenuOpen}
             >
@@ -193,7 +193,6 @@ const Navbar: React.FC = () => {
                       className="flex-shrink-0 w-auto max-w-2/4 mx-10"
                       key={index}
                     >
-                      {/* Lebar otomatis dengan batas maksimal 50% */}
                       <h3 className="font-semibold text-lg mb-2 underline">
                         {category.category}
                       </h3>
@@ -203,7 +202,7 @@ const Navbar: React.FC = () => {
                             <Link
                               href="#"
                               // onClick={handleLinkClick}
-                              className="block hover:bg-gray-100 py-2 text-lg"
+                              className="block hover:text-blue-500 py-2 text-lg" // Mengganti hover background color menjadi biru
                             >
                               {item}
                             </Link>
@@ -240,7 +239,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="#"
                       // onClick={handleLinkClick}
-                      className="block hover:bg-gray-100 py-2 text-lg "
+                      className="block hover:text-blue-500 py-2 text-lg "
                     >
                       AI Sales Tools
                     </Link>
@@ -249,7 +248,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="#"
                       // onClick={handleLinkClick}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Virtual Reality
                     </Link>
@@ -272,7 +271,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/training"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg "
+                      className="block hover:text-blue-500 py-2 text-lg "
                     >
                       Public, In-House Training, Online Learning
                     </Link>
@@ -281,7 +280,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/hybridOfficerDevelopment"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Hybrid Officer Development Crash Program
                     </Link>
@@ -290,7 +289,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/atc"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Asessment for Technical Competency
                     </Link>
@@ -304,7 +303,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/lms"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Learning Management System
                     </Link>
@@ -313,7 +312,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/consultingService"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Consulting Service
                     </Link>
@@ -322,7 +321,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/outbound"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Outbound & Gathering
                     </Link>
@@ -336,7 +335,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/whatWeDo/coaching"
                       onClick={() => handleClick("whatWeDo")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Executive Coaching & Bussines Mentoring
                     </Link>
@@ -359,7 +358,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/more/aboutUs"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg "
+                      className="block hover:text-blue-500 py-2 text-lg "
                     >
                       About Us
                     </Link>
@@ -368,7 +367,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/more/historyPage"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       History
                     </Link>
@@ -377,7 +376,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/more/visiMisi"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Vision & Mission
                     </Link>
@@ -391,7 +390,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/more/ourClients"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Our Clients
                     </Link>
@@ -400,7 +399,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="/more/ourFacilitator"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Our Facilitator
                     </Link>
@@ -409,7 +408,7 @@ const Navbar: React.FC = () => {
                     <Link
                       href="#"
                       onClick={() => handleClick("more")}
-                      className="block hover:bg-gray-100 py-2 text-lg"
+                      className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Contact Us
                     </Link>

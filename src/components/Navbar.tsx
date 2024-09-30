@@ -173,7 +173,9 @@ const Navbar: React.FC = () => {
 
       {/* Section yang ditampilkan setelah klik navbar */}
       {activeSection === "bootcampProgram" && (
+
         <BootcampSection handleClick={handleClick} />
+
       )}
 
       {activeSection === "newTraining" && (

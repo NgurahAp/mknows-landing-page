@@ -29,13 +29,14 @@ const BootcampSection: React.FC<BootcampSectionProps> = ({ handleClick }) => {
                   {category.category}
                 </h3>
                 <ul className="space-y-2">
-                  {category.items.map((item: string, idx: number) => (
+                  {category.items.map((item, idx: number) => (
                     <li key={idx}>
                       <Link
-                        href="#"
+                        href={item.href}
                         className="block hover:text-blue-500 py-2 text-lg"
+                        onClick={() => handleClick("bootcampProgram")}
                       >
-                        {item}
+                        {item.name}
                       </Link>
                     </li>
                   ))}

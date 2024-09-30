@@ -96,9 +96,9 @@ export default function About() {
             }}
           >
             {/* Kotak shadow di tengah */}
-            <div className="absolute w-11/12 h-5/6 rounded-lg bg-[#302A2A4D] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+            <div className="absolute w-11/12 md:h-5/6 rounded-lg bg-[#302A2A4D] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
               {/* Tulisan berwarna putih */}
-              <h2 className="text-white md:text-4xl text-[20px] md:px-16 px-2  ">
+              <h2 className="text-white md:text-4xl text-[20px] md:px-16 px-2 py-14  ">
                 Program pelatihan unggulan yang banyak di ambil klien M-Knows
                 antara lain meliputi topik: Marketing, Sales Distribution,
                 Service, Leadership, Managerial, Supervisory, Credit Management,

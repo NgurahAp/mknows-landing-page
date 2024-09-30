@@ -2,7 +2,7 @@ export const cardsData = [
   {
     imageSrc: "/assets/more/aboutUs/mt-mdp.png",
     altText: "MT & MDP Program",
-    title: "MT & MDP Program iwjdwjd iejfijfejije",
+    title: "MT & MDP Program",
   },
   {
     imageSrc: "/assets/more/aboutUs/competency.png",

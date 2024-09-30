@@ -27,10 +27,10 @@ const CardGrid: React.FC<CardGridProps> = ({ cards,  }) => {
               className="mx-auto"
             />
           </div>
-          <h2 className="text-xl font-semibold text-[#648B04] text-left mb-2">
+          <h2 className="md:text-xl text-lg font-semibold text-[#648B04] text-left mb-2">
             {card.title}
           </h2>
-          <p className="text-gray-600 text-xl text-left">{card.description}</p>
+          <p className="text-gray-600 md:text-xl text-lg text-left">{card.description}</p>
         </div>
       ))}
     </div>

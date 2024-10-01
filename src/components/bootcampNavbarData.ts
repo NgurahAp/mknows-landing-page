@@ -1,6 +1,6 @@
 export interface BootcampCategory {
   category: string;
-  items: { name: string; href: string }[]; // Setiap item sekarang berisi 'name' dan 'href'
+  items: { name: string; href: string }[]; 
 }
 
 export const bootcampData: BootcampCategory[] = [
@@ -10,16 +10,16 @@ export const bootcampData: BootcampCategory[] = [
       { name: "UI/UX for Web & App Project", href: "/pdfViewer/ui&ux" },
       {
         name: "Back End Developer Advance Level",
-        href: "/bootcamps/backend-advance",
+        href: "/pdfViewer/back-end-advance",
       },
       {
         name: "Front End Developer for Advance Level",
-        href: "/bootcamps/frontend-advance",
+        href: "/pdfViewer/front-end-advance",
       },
-      { name: "IT QA Engineer", href: "/bootcamps/qa-engineer" },
+      { name: "IT QA Engineer", href: "/pdfViewer/it-qa" },
       {
         name: "Flutter Multi Platform App Development",
-        href: "/bootcamps/flutter",
+        href: "/pdfViewer/flutter",
       },
     ],
   },
@@ -28,26 +28,26 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Aplikasi AI untuk Industri Perbankan, Multifinance, Asuransi, dan Fintech",
-        href: "/bootcamps/ai-fintech",
+        href: "/pdfViewer/terapan-ai",
       },
       {
         name: "Data Science dan Data Analist di Industri Perbankan, Pembiayaan, dan Fintech AI",
-        href: "/bootcamps/data-science",
+        href: "/pdfViewer/datascience&analytics",
       },
     ],
   },
   {
     category: "Design",
     items: [
-      { name: "3D Bootcamp", href: "/bootcamps/3d" },
-      { name: "Photography Bootcamp", href: "/bootcamps/photography" },
+      { name: "3D Bootcamp", href: "/pdfViewer/3d" },
+      { name: "Photography Bootcamp", href: "#" },
       {
         name: "Video Editing & Animation Bootcamp",
-        href: "/bootcamps/video-editing",
+        href: "/pdfViewer/video-editor-content-creator",
       },
       {
         name: "Videografer & Sinematografer Bootcamp",
-        href: "/bootcamps/videography",
+        href: "/pdfViewer/videografer-sinematografer",
       },
     ],
   },
@@ -73,11 +73,11 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Cyber Security: Web Exploitation and Design",
-        href: "/bootcamps/cyber-security",
+        href: "/pdfViewer/cyber-security",
       },
       {
-        name: "Simplicity Bootcamp: Pemrograman untuk Blockchain & Smart Contract",
-        href: "/bootcamps/simplicity",
+        name: "Keamanan Jaringan Cyber, Analisis Malware & Penanganan Insiden Keamanan",
+        href: "#",
       },
     ],
   },
@@ -86,19 +86,19 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Digital Leadership & Team Management",
-        href: "/bootcamps/digital-leadership",
+        href: "/pdfViewer/",
       },
       {
         name: "Analytics & Decision Making for Leader",
-        href: "/bootcamps/analytics-decision",
+        href: "/pdfViewer/",
       },
       {
         name: "Managing Team Creativity & Innovation for Leaders",
-        href: "/bootcamps/team-creativity",
+        href: "/pdfViewer/",
       },
       {
         name: "Strategic AI Skills: Generative AI, Diagnostic AI & Projective AI",
-        href: "/bootcamps/ai-strategy",
+        href: "/pdfViewer/",
       },
     ],
   },
@@ -107,19 +107,19 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Management Emosi, Tempramen & Kontrol Diri",
-        href: "/bootcamps/emotion-management",
+        href: "/pdfViewer/",
       },
       {
         name: "Komunikasi Personal & Interpersonal di Era Digital",
-        href: "/bootcamps/communication-skills",
+        href: "/pdfViewer/",
       },
       {
         name: "Manajemen konflik, networking dan hubungan baik",
-        href: "/bootcamps/conflict-management",
+        href: "/pdfViewer/",
       },
       {
         name: "Negosiasi untuk bisnis dan kemasyarakatan",
-        href: "/bootcamps/negotiation-skills",
+        href: "/pdfViewer/",
       },
     ],
   },
@@ -128,11 +128,11 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Perencanaan IoT: Ide, Solusi, Perangkaian, Manajemen Proyek",
-        href: "/bootcamps/iot-planning",
+        href: "/pdfViewer/IoT",
       },
       {
         name: "Keamanan IOT: Manajemen Identitas dan Akses IoT, Keamanan Sistem",
-        href: "/bootcamps/iot-security",
+        href: "/pdfViewer/",
       },
     ],
   },
@@ -141,11 +141,11 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Unreal Engine 5 Virtual Reality Development Bootcamp",
-        href: "/bootcamps/ue5-vr",
+        href: "/pdfViewer/virtual-reality",
       },
       {
         name: "Bootcamp Game Development: Tingkatkan kemampuanmu menuju karir di Industri Game",
-        href: "/bootcamps/game-development",
+        href: "/pdfViewer/game-development",
       },
     ],
   },
@@ -154,15 +154,15 @@ export const bootcampData: BootcampCategory[] = [
     items: [
       {
         name: "Strategi Sponsorship & Penjualan Era Digital",
-        href: "/bootcamps/sponsorship-strategy",
+        href: "/pdfViewer/strategi-sponsorship",
       },
       {
         name: "Digital Marketing dan Event Management",
-        href: "/bootcamps/digital-marketing",
+        href: "/pdfViewer/Digital-Marketing",
       },
       {
         name: "Financial Planning, Business Modeling, Scenario Testing & Analytics Dashboard",
-        href: "/bootcamps/financial-planning",
+        href: "/pdfViewer/financial-planning",
       },
     ],
   },

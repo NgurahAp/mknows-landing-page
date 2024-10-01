@@ -19,12 +19,20 @@ const Navbar: React.FC = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-  const handleClick = (section: string) => {
-    setActiveSection((prevSection) =>
-      prevSection === section ? null : section
-    );
-  };
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+  const href = e.currentTarget.getAttribute('href');
+  if (href && href !== '#') {
+    setActiveSection(null);
+  } else {
+    e.preventDefault();
+    setActiveSection((prevSection) => prevSection === section ? null : section);
+  }
+};
 
+  const handleHomeClick = () => {
+    setActiveSection(null);
+    closeMenu();
+  };
   return (
     <>
       <nav className="bg-white md:h-24 w-screen fixed top-0 left-0  z-50 border-gray-200 dark:bg-gray-900">
@@ -44,7 +52,7 @@ const Navbar: React.FC = () => {
             </Link>
             <div className="relative hidden md:flex items-center justify-center  pl-20">
               <div className="relative bg-[#F5F5F5] overflow-hidden w-full h-14 rounded-full">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-e-none">
                   <Image
                     src="/assets/home/search-icon.png"
                     alt="Search Icon"
@@ -70,6 +78,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link
                     href="/"
+                    onClick={handleHomeClick}
                     className="text-black flex text-lg hover:text-gray-400"
                   >
                     Home
@@ -77,8 +86,8 @@ const Navbar: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href=""
-                    onClick={() => handleClick("bootcampProgram")}
+                    href="#"
+                    onClick={(e) => handleClick(e, "bootcampProgram")}
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     Bootcamp Program
@@ -93,8 +102,8 @@ const Navbar: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href=""
-                    onClick={() => handleClick("newTraining")}
+                    href="#"
+                    onClick={(e) => handleClick(e, "newTraining")}
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     New Training
@@ -109,8 +118,8 @@ const Navbar: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href=""
-                    onClick={() => handleClick("whatWeDo")}
+                    href="#"
+                    onClick={(e) => handleClick(e, "whatWeDo")}
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     What We Do
@@ -125,8 +134,8 @@ const Navbar: React.FC = () => {
                 </li>
                 <li>
                   <Link
-                    href=""
-                    onClick={() => handleClick("more")}
+                    href="#"
+                    onClick={(e) => handleClick(e, "more")}
                     className="text-black flex items-center text-lg hover:text-gray-400"
                   >
                     More
@@ -172,7 +181,9 @@ const Navbar: React.FC = () => {
 
       {/* Section yang ditampilkan setelah klik navbar */}
       {activeSection === "bootcampProgram" && (
-        <BootcampSection handleClick={handleClick} />
+        <BootcampSection
+          handleClick={(e) => handleClick(e, "bootcampProgram")}
+        />
       )}
 
       {activeSection === "newTraining" && (
@@ -184,8 +195,8 @@ const Navbar: React.FC = () => {
                 <ul className="space-y-2 -ml-2">
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/ai-sales"
+                      onClick={(e) => handleClick(e, "newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg "
                     >
                       AI Sales Tools
@@ -193,8 +204,8 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/virtual-reality"
+                      onClick={(e) => handleClick(e, "newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Virtual Reality
@@ -217,7 +228,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/training"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg "
                     >
                       Public, In-House Training, Online Learning
@@ -226,7 +237,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/hybridOfficerDevelopment"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Hybrid Officer Development Crash Program
@@ -235,7 +246,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/atc"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Asessment for Technical Competency
@@ -249,7 +260,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/lms"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Learning Management System
@@ -258,7 +269,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/consultingService"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Consulting Service
@@ -267,7 +278,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/outbound"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Outbound & Gathering
@@ -281,7 +292,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/whatWeDo/coaching"
-                      onClick={() => handleClick("whatWeDo")}
+                      onClick={(e) => handleClick(e, "whatWeDo")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Executive Coaching & Bussines Mentoring
@@ -304,7 +315,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/aboutUs"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg "
                     >
                       About Us
@@ -313,7 +324,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/historyPage"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       History
@@ -322,7 +333,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/visiMisi"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Vision & Mission
@@ -336,7 +347,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/ourClients"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Our Clients
@@ -345,7 +356,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/ourFacilitator"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Our Facilitator
@@ -354,7 +365,7 @@ const Navbar: React.FC = () => {
                   <li>
                     <Link
                       href="/more/contactUs"
-                      onClick={() => handleClick("more")}
+                      onClick={(e) => handleClick(e, "more")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Contact Us

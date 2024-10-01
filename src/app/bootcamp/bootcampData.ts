@@ -117,7 +117,8 @@ export const bootcampData: Bootcamp[] = [
       "Bootcamp intensif yang dirancang khusus untuk memberikan kemampuan mendalam tentang strategi pemasaran digital yang efektif dan praktik terbaik dalam mengorganisir acara yang sukses. Peserta akan mempelajari mulai dari pengenalan awal, saluran pemasaran yang digunakan, sampai projek akhir.",
     image: "/assets/bootcamp/digitalMarketing.png",
     bg: "#FFEADD",
-    link: "/pdfViewer/",
+    link: "/pdfViewer/Digital-Marketing",
+
   },
   {
     id: 12,
@@ -137,7 +138,8 @@ export const bootcampData: Bootcamp[] = [
       'Pelatihan "Virtual Reality: Transformasi Bisnis dengan VR" memberikan pemahaman mendalam dan keterampilan praktis dalam memanfaatkan teknologi VR untuk meningkatkan bisnis. Peserta akan merasakan VR, memahami aplikasinya dalam berbagai industri...',
     image: "/assets/bootcamp/virtualReality.png",
     bg: "#DBAFA0",
-    link: "/pdfViewer/",
+    link: "/pdfViewer/virtual-reality",
+
   },
   {
     id: 14,
@@ -167,7 +169,8 @@ export const bootcampData: Bootcamp[] = [
       "Pelatihan ini dirancang khusus untuk memberikan pengetahuan dan keterampilan yang relevan kepada mahasiswa ekonomi, administrasi, teknik industri dan calon pendiri start up, yang ingin mempersiapkan diri... ",
     image: "/assets/bootcamp/financialPlanning.png",
     bg: "#CAF4FF",
-    link: "/pdfViewer/",
+    link: "/pdfViewer/financial-planning",
+
   },
   {
     id: 17,
@@ -177,7 +180,8 @@ export const bootcampData: Bootcamp[] = [
       "Pelatihan ini dirancang untuk memberikan pemahaman mendalam tentang Internet of Things (IoT) kepada peserta, dengan fokus pada konsep, pengembangan perangkat keras dan perangkat lunak IoT, serta aplikasinya dalam berbagai industri. ",
     image: "/assets/bootcamp/IOT.png",
     bg: "#CAF4FF",
-    link: "/pdfViewer/",
+    link: "/pdfViewer/IoT",
+
   },
   {
     id: 18,
@@ -197,6 +201,7 @@ export const bootcampData: Bootcamp[] = [
       "Dalam Bootcamp Pengembangan Game M-Knows, Anda akan belajar cara membuat game dan memulai karir Anda di industri game. Setelah menyelesaikan bootcamp ini, Anda akan memiliki keterampilan yang diperlukan untuk membuat game Anda sendiri atau  bergabung dengan studio pengembang game. ",
     image: "/assets/bootcamp/game.png",
     bg: "#9EB8D9",
-    link: "/pdfViewer/",
+    link: "/pdfViewer/game-development",
+
   },
 ];

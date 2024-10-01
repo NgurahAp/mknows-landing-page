@@ -25,6 +25,10 @@ const Navbar: React.FC = () => {
     );
   };
 
+  const handleHomeClick = () => {
+    setActiveSection(null);
+    closeMenu();
+  };
   return (
     <>
       <nav className="bg-white md:h-24 w-screen fixed top-0 left-0  z-50 border-gray-200 dark:bg-gray-900">
@@ -70,6 +74,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link
                     href="/"
+                    onClick={handleHomeClick}
                     className="text-black flex text-lg hover:text-gray-400"
                   >
                     Home

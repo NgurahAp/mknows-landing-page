@@ -19,15 +19,15 @@ const Navbar: React.FC = () => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-   const handleClick = (
-     e: React.MouseEvent<HTMLAnchorElement>,
-     section: string
-   ) => {
-     e.preventDefault(); // Prevent default link behavior
-     setActiveSection((prevSection) =>
-       prevSection === section ? null : section
-     );
-   };
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+  const href = e.currentTarget.getAttribute('href');
+  if (href && href !== '#') {
+    setActiveSection(null);
+  } else {
+    e.preventDefault();
+    setActiveSection((prevSection) => prevSection === section ? null : section);
+  }
+};
 
   const handleHomeClick = () => {
     setActiveSection(null);

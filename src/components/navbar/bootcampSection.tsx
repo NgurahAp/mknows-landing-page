@@ -4,7 +4,10 @@ import Link from "next/link";
 import { BootcampCategory, bootcampData } from "../bootcampNavbarData";
 
 interface BootcampSectionProps {
-  handleClick: (section: string) => void;
+  handleClick: (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    section: string
+  ) => void;
 }
 
 const BootcampSection: React.FC<BootcampSectionProps> = ({ handleClick }) => {
@@ -31,13 +34,13 @@ const BootcampSection: React.FC<BootcampSectionProps> = ({ handleClick }) => {
                 <ul className="space-y-2">
                   {category.items.map((item, idx: number) => (
                     <li key={idx}>
-                      <Link
+                      <a
                         href={item.href}
                         className="block hover:text-blue-500 py-2 text-lg"
-                        onClick={() => handleClick("bootcampProgram")}
+                        onClick={(e) => handleClick(e, "bootcampProgram")}
                       >
                         {item.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -46,11 +49,14 @@ const BootcampSection: React.FC<BootcampSectionProps> = ({ handleClick }) => {
           </div>
         </div>
         <div className="mt-10">
-          <Link href="/bootcamp" onClick={() => handleClick("bootcampProgram")}>
+          <a
+            href="/bootcamp"
+            onClick={(e) => handleClick(e, "bootcampProgram")}
+          >
             <button className="bg-[#D7E9F4] text-xl text-black font-semibold py-2 px-4 rounded-lg w-full">
               Lihat Selengkapnya
             </button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

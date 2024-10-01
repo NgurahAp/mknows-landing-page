@@ -184,8 +184,8 @@ const Navbar: React.FC = () => {
                 <ul className="space-y-2 -ml-2">
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/ai-sales"
+                      onClick={() => handleClick("newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg "
                     >
                       AI Sales Tools
@@ -193,8 +193,8 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/virtual-reality"
+                      onClick={() => handleClick("newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Virtual Reality

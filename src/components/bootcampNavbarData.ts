@@ -8,7 +8,7 @@ export const bootcampData: BootcampCategory[] = [
     category: "Information Technology",
     items: [
       { name: "UI/UX for Web & App Project", href: "/pdfViewer/ui&ux" },
-      {
+      { 
         name: "Back End Developer Advance Level",
         href: "/bootcamps/backend-advance",
       },

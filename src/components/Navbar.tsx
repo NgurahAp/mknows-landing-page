@@ -25,6 +25,10 @@ const Navbar: React.FC = () => {
     );
   };
 
+  const handleHomeClick = () => {
+    setActiveSection(null);
+    closeMenu();
+  };
   return (
     <>
       <nav className="bg-white md:h-24 w-screen fixed top-0 left-0  z-50 border-gray-200 dark:bg-gray-900">
@@ -70,6 +74,7 @@ const Navbar: React.FC = () => {
                 <li>
                   <Link
                     href="/"
+                    onClick={handleHomeClick}
                     className="text-black flex text-lg hover:text-gray-400"
                   >
                     Home
@@ -184,8 +189,8 @@ const Navbar: React.FC = () => {
                 <ul className="space-y-2 -ml-2">
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/ai-sales"
+                      onClick={() => handleClick("newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg "
                     >
                       AI Sales Tools
@@ -193,8 +198,8 @@ const Navbar: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      href="#"
-                      // onClick={handleLinkClick}
+                      href="/pdfViewer/virtual-reality"
+                      onClick={() => handleClick("newTraining")}
                       className="block hover:text-blue-500 py-2 text-lg"
                     >
                       Virtual Reality

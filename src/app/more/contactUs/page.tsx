@@ -4,24 +4,24 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="h-screen mt-16 flex flex-row">
+    <section className="h-screen mt-16 flex md:flex-row flex-col">
       {/* Left column for image */}
-      <div className="w-1/2 relative ">
+      <div className="w-1/2 md:relative ">
         <Image
           src="/assets/more/contactUs/right3.jpg"
           alt="Deskripsi gambar"
           fill
-          className="rounded-lg object-contain pl-14" // Ubah object-cover ke object-contain
+          className="rounded-lg object-contain pl-14" // 
         />
       </div>
 
       {/* Right column for text */}
-      <div className="w-1/2 flex items-center">
+      <div className="md:w-1/2 w-full  justify-center flex items-center md:pt-0 pt-10">
         <div className="px-10">
           <h1 className="font-semibold text-green-500 text-4xl md:text-5xl md:leading-tight">
             CONTACT US
           </h1>
-          <p className="mb-8 mt-2 text-xl pr-36">
+          <p className="mb-8 mt-2 text-xl md:pr-36 pr-0">
             Jika Anda memiliki pertanyaan atau membutuhkan bantuan lebih lanjut,
             tim kami siap membantu! Hubungi kami langsung melalui WhatsApp!
           </p>

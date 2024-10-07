@@ -4,14 +4,14 @@ import Image from "next/image";
 
 export default function ContactUs() {
   return (
-    <section className="h-screen mt-16 flex md:flex-row flex-col">
+    <section className="md:h-screen h-[80vh] mt-16 flex md:flex-row flex-col">
       {/* Left column for image */}
-      <div className="w-1/2 md:relative ">
+      <div className="w-1/2  md:relative ">
         <Image
           src="/assets/more/contactUs/right3.jpg"
           alt="Deskripsi gambar"
           fill
-          className="rounded-lg object-contain pl-14" // 
+          className="rounded-lg object-contain md:pl-14" 
         />
       </div>
 

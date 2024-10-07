@@ -1,174 +1,48 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    position: "",
-    whatsapp: "",
-  });
-
-  const [error, setError] = useState("");
-  const router = useRouter();
-
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
-
-    if (!formData.name || !formData.email) {
-      setError("All fields are required!");
-      return;
-    }
-
-    setError("");
-    console.log("Form submitted:", formData);
-    router.push("/success");
-  };
-
   return (
-    <div className="flex pt-32 justify-center items-center">
-      <div className="rounded-lg p-8 max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="flex justify-center items-center bg-[#EDFDC4] rounded-lg p-4">
-          <Image
-            width={1450}
-            height={350}
-            src="/assets/more/contactUs/form-ilustration.png"
-            alt="Form illustration"
-          />
-        </div>
+    <section className="md:h-screen h-[80vh] mt-16 flex md:flex-row flex-col">
+      {/* Left column for image */}
+      <div className="w-1/2  md:relative ">
+        <Image
+          src="/assets/more/contactUs/right3.jpg"
+          alt="Deskripsi gambar"
+          fill
+          className="rounded-lg object-contain md:pl-14" 
+        />
+      </div>
 
-        <div>
-          <h1 className="text-3xl lg:text-4xl text-center font-semibold mb-6">
-            Permintaan Formulir
+      {/* Right column for text */}
+      <div className="md:w-1/2 w-full  justify-center flex items-center md:pt-0 pt-10">
+        <div className="px-10">
+          <h1 className="font-semibold text-green-500 text-4xl md:text-5xl md:leading-tight">
+            CONTACT US
           </h1>
-          <form className="space-y-4" onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Nama Lengkap <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Masukkan Nama Lengkap"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Nama Perusahaan <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                placeholder="Masukkan Nama Perusahaan"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                value={formData.company}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Jabatan <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                name="position"
-                placeholder="Masukkan Jabatan"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                value={formData.position}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Nomor Whatsapp <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="text"
-                name="whatsapp"
-                placeholder="Masukkan Nomor Whatsapp"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                value={formData.whatsapp}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Email <span className="text-red-500">*</span>
-              </label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Masukkan Email"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Kategori <span className="text-red-500">*</span>
-              </label>
-              <select className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm">
-                <option>Public & In-House Training</option>
-                <option>Online Learning</option>
-                <option>Consulting Services</option>
-                <option>Assessment for Technical</option>
-                <option>Executive Coaching & Business</option>
-                <option>Outbound</option>
-                <option>Web Design With Wix</option>
-                <option>Business Video</option>
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">
-                Deskripsi
-              </label>
-              <textarea
-                name="description"
-                placeholder="Masukkan Deskripsi"
-                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-[#ACEE07] hover:bg-green-600 text-white py-2 px-4 rounded-md shadow-md"
+          <p className="mb-8 mt-2 text-xl md:pr-36 pr-0">
+            Jika Anda memiliki pertanyaan atau membutuhkan bantuan lebih lanjut,
+            tim kami siap membantu! Hubungi kami langsung melalui WhatsApp!
+          </p>
+          <a
+            href="https://wa.me/081210468281"
+            className="inline-flex items-center px-8 py-3 bg-green-500 text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-green-600 transition duration-300 ease-in-out"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-6 h-6 mr-2"
+              viewBox="0 0 24 24"
             >
-              Kirim
-            </button>
-          </form>
+              <path d="M12 0C5.371 0 0 5.373 0 12c0 2.123.553 4.186 1.602 6.011L.051 23.962l5.716-1.498C7.834 23.386 9.895 24 12 24c6.628 0 12-5.373 12-12S18.628 0 12 0zm7.488 17.216c-.297.837-1.471 1.538-2.058 1.582-.531.04-1.175.118-3.662-1.179-3.074-1.604-5.07-5.376-5.226-5.629-.154-.257-1.243-1.65-1.243-3.145s.785-2.223 1.062-2.535c.276-.312.598-.392.798-.392.199 0 .398.002.572.01.186.008.435-.07.681.527.256.613.874 2.128.951 2.28.077.153.128.329.026.526-.099.196-.149.319-.298.491-.154.176-.325.393-.462.527-.153.149-.313.312-.136.609.176.298.783 1.292 1.676 2.091 1.152 1.027 2.106 1.345 2.404 1.493.298.149.47.127.64-.076.176-.199.733-.855.929-1.149.196-.297.393-.247.662-.149.267.099 1.685.795 1.976.94.291.149.485.221.557.343.072.118.072.676-.225 1.514z" />
+            </svg>
+            WhatsApp
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

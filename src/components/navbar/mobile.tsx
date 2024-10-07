@@ -39,14 +39,14 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({
               height={24}
             />
           </div>
-          <div className="flex items-center h-full">
+          {/* <div className="flex items-center h-full">
             <input
               type="search"
               id="search-navbar-mobile"
               className="block w-full pl-14 text-lg text-gray-900 bg-[#F5F5F5] border-none outline-none focus:ring-0 focus:outline-none h-12"
               placeholder="Search"
             />
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                 className="md:w-36 md:h-auto object-contain"
               />
             </Link>
-            <div className="relative hidden md:flex items-center justify-center  pl-20">
+            {/* <div className="relative hidden md:flex items-center justify-center  pl-20">
               <div className="relative bg-[#F5F5F5] overflow-hidden w-full h-14 rounded-full">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-e-none">
                   <Image
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="flex items-center">
